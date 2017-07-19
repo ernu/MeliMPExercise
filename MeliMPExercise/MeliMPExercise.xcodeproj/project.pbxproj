@@ -15,6 +15,7 @@
 		63016BF51F1FA55F00C7BDF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63016BF31F1FA55F00C7BDF7 /* LaunchScreen.storyboard */; };
 		63016C001F1FA55F00C7BDF7 /* MeliMPExerciseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63016BFF1F1FA55F00C7BDF7 /* MeliMPExerciseTests.m */; };
 		63016C0B1F1FA55F00C7BDF7 /* MeliMPExerciseUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63016C0A1F1FA55F00C7BDF7 /* MeliMPExerciseUITests.m */; };
+		AA5539B8DE5D62D46A1C041F /* libPods-MeliMPExercise.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF008703DC367F3A38E8AAF /* libPods-MeliMPExercise.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2589AA287D6FD872DA33BFAE /* Pods-MeliMPExercise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeliMPExercise.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeliMPExercise/Pods-MeliMPExercise.release.xcconfig"; sourceTree = "<group>"; };
 		63016BE21F1FA55F00C7BDF7 /* MeliMPExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeliMPExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63016BE61F1FA55F00C7BDF7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		63016BE81F1FA55F00C7BDF7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +53,8 @@
 		63016C061F1FA55F00C7BDF7 /* MeliMPExerciseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeliMPExerciseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63016C0A1F1FA55F00C7BDF7 /* MeliMPExerciseUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeliMPExerciseUITests.m; sourceTree = "<group>"; };
 		63016C0C1F1FA55F00C7BDF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6DF008703DC367F3A38E8AAF /* libPods-MeliMPExercise.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MeliMPExercise.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E34B8179BAA9FF64EE6689DE /* Pods-MeliMPExercise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeliMPExercise.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeliMPExercise/Pods-MeliMPExercise.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA5539B8DE5D62D46A1C041F /* libPods-MeliMPExercise.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22EE45D827E0084F5FD1AE08 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6DF008703DC367F3A38E8AAF /* libPods-MeliMPExercise.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		63016BD91F1FA55F00C7BDF7 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +98,8 @@
 				63016BFE1F1FA55F00C7BDF7 /* MeliMPExerciseTests */,
 				63016C091F1FA55F00C7BDF7 /* MeliMPExerciseUITests */,
 				63016BE31F1FA55F00C7BDF7 /* Products */,
+				6794B4ABBDA9CB6D2AD21D8A /* Pods */,
+				22EE45D827E0084F5FD1AE08 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +155,15 @@
 			path = MeliMPExerciseUITests;
 			sourceTree = "<group>";
 		};
+		6794B4ABBDA9CB6D2AD21D8A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E34B8179BAA9FF64EE6689DE /* Pods-MeliMPExercise.debug.xcconfig */,
+				2589AA287D6FD872DA33BFAE /* Pods-MeliMPExercise.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +171,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 63016C0F1F1FA55F00C7BDF7 /* Build configuration list for PBXNativeTarget "MeliMPExercise" */;
 			buildPhases = (
+				3117021812787B217F562D1E /* [CP] Check Pods Manifest.lock */,
 				63016BDE1F1FA55F00C7BDF7 /* Sources */,
 				63016BDF1F1FA55F00C7BDF7 /* Frameworks */,
 				63016BE01F1FA55F00C7BDF7 /* Resources */,
+				E42C52249330E193A62F86E7 /* [CP] Embed Pods Frameworks */,
+				E5C4A1A78728768034DA0840 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -267,6 +294,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3117021812787B217F562D1E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E42C52249330E193A62F86E7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MeliMPExercise/Pods-MeliMPExercise-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5C4A1A78728768034DA0840 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MeliMPExercise/Pods-MeliMPExercise-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		63016BDE1F1FA55F00C7BDF7 /* Sources */ = {
@@ -424,6 +499,7 @@
 		};
 		63016C101F1FA55F00C7BDF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E34B8179BAA9FF64EE6689DE /* Pods-MeliMPExercise.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MeliMPExercise/Info.plist;
@@ -435,6 +511,7 @@
 		};
 		63016C111F1FA55F00C7BDF7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2589AA287D6FD872DA33BFAE /* Pods-MeliMPExercise.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MeliMPExercise/Info.plist;
