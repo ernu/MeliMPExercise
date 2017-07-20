@@ -46,10 +46,10 @@ typedef enum {
 
 - (void)initDatosViewContainer {
     
-    _montoDataView = [[DataView alloc] initWithData:@"Ingrese un monto" img:nil typeId:DataViewMonto];
-    _medioPagoDataView = [[DataView alloc] initWithData:@"Seleccione un medio de pago" img:nil typeId:DataViewMedioPago];
-    _bancoDataView = [[DataView alloc] initWithData:@"Ingrese un banco" img:nil typeId:DataViewBanco];
-    _cuotasDataView = [[DataView alloc] initWithData:@"Ingrese la cantidad de cuotas" img:nil typeId:DataViewCuotas];
+    _montoDataView = [[DataView alloc] initWithData:NSLocalizedString(@"TXT_INGRESE_MONTO", nil) img:nil typeId:DataViewMonto];
+    _medioPagoDataView = [[DataView alloc] initWithData:NSLocalizedString(@"TXT_SELECCIONE_MEDIO_PAGO", nil) img:nil typeId:DataViewMedioPago];
+    _bancoDataView = [[DataView alloc] initWithData:NSLocalizedString(@"TXT_SELECCIONE_BANCO", nil) img:nil typeId:DataViewBanco];
+    _cuotasDataView = [[DataView alloc] initWithData:NSLocalizedString(@"TXT_SELECCIONE_CUOTAS", nil) img:nil typeId:DataViewCuotas];
     _montoDataView.delegate = self;
     _medioPagoDataView.delegate = self;
     _bancoDataView.delegate = self;

@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  MeliMPExercise
+
+  Created by Ernesto Kim on 7/20/17.
+  Copyright © 2017 Ernesto Kim. All rights reserved.
+*/
+
+"TXT_INGRESE_MONTO" = "Ingrese un monto";
+"TXT_SELECCIONE_MEDIO_PAGO" = "Seleccione un medio de pago";
+"TXT_SELECCIONE_BANCO" = "Seleccione un banco";
+"TXT_SELECCIONE_CUOTAS" = "Seleccione la cantidad de cuotas";
