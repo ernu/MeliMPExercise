@@ -8,12 +8,11 @@
 
 #import "PagarViewController.h"
 
-#define dataViewMonto               @"dataViewMonto"
-#define dataViewMedioPago           @"dataViewMedioPago"
-#define dataViewBanco               @"dataViewBanco"
-#define dataViewCuotas              @"dataViewCuotas"
+#define segueMonto                @"segueMonto"
 
-@interface PagarViewController()
+@interface PagarViewController() {
+    NSString *selectedMonto;
+}
 
 @property (strong, nonatomic) DataView *montoDataView;
 @property (strong, nonatomic) DataView *medioPagoDataView;
@@ -34,8 +33,9 @@ typedef enum {
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self initDatosViewContainer];
+    selectedMonto = 0;
     
+    [self initDatosViewContainer];
     
 }
 
@@ -103,6 +103,7 @@ typedef enum {
     {
         case DataViewMonto:
             NSLog(@"MontoTapped");
+            [self performSegueWithIdentifier:segueMonto sender:self];
             
             break;
         case DataViewMedioPago:
@@ -122,6 +123,24 @@ typedef enum {
             break;
     }
     
+}
+
+#pragma mark - Storyboard
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([segue.identifier isEqualToString:segueMonto]) {
+        MontoViewController *vc = [segue destinationViewController];
+        [vc setDelegate:self];
+    }
+    
+}
+
+#pragma mark - MontoDelegate
+
+- (void)onMontoConfirmed:(NSString *)monto {
+    selectedMonto = monto;
+    _montoDataView.datosLbl.text = [NSString stringWithFormat:@"$ %@", monto];
 }
 
 @end

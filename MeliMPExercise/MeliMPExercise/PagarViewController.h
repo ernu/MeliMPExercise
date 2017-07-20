@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "DataView.h"
+#import "MontoViewController.h"
 
-@interface PagarViewController : UIViewController <DataViewDelegate>
+@interface PagarViewController : UIViewController <DataViewDelegate, MontoDelegate>
 
 @property (strong, nonatomic) IBOutlet UIView *datosViewContainer;
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *datosHeightConstraint;
