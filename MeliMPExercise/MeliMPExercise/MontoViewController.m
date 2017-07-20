@@ -8,6 +8,9 @@
 
 #import "MontoViewController.h"
 #import "UIColor+MELI.h"
+#import "PagarViewController.h"
+
+#define unwindFromMontoToPagar                @"unwindFromMontoToPagar"
 
 @interface MontoViewController ()
 
@@ -38,8 +41,7 @@
 }
 
 - (IBAction)confirmBtnTapped:(id)sender {
-    [_delegate onMontoConfirmed:_montoTf.text];
-    [self closeBtnTapped:nil];
+    [self performSegueWithIdentifier:unwindFromMontoToPagar sender:self];
 }
 
 #pragma mark - UITextFieldDelegate
@@ -60,6 +62,15 @@
     }
     
     return YES;
+}
+
+#pragma mark - Storyboard
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:unwindFromMontoToPagar]) {
+        PagarViewController *vc = [segue destinationViewController];
+        [vc setSelectedMonto:_montoTf.text];
+    }
 }
 
 @end

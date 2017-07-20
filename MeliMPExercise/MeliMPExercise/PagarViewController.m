@@ -9,11 +9,9 @@
 #import "PagarViewController.h"
 
 #define segueMonto                @"segueMonto"
-#define segueMedioPago                @"segueMedioPago"
+#define segueMedioPago            @"segueMedioPago"
 
-@interface PagarViewController() {
-    NSString *selectedMonto;
-}
+@interface PagarViewController()
 
 @property (strong, nonatomic) DataView *montoDataView;
 @property (strong, nonatomic) DataView *medioPagoDataView;
@@ -34,7 +32,7 @@ typedef enum {
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    selectedMonto = 0;
+    _selectedMonto = 0;
     
     [self initDatosViewContainer];
     
@@ -131,21 +129,16 @@ typedef enum {
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-    if ([segue.identifier isEqualToString:segueMonto]) {
-        MontoViewController *vc = [segue destinationViewController];
-        [vc setDelegate:self];
-    } else if ([segue.identifier isEqualToString:segueMedioPago]) {
+//    if ([segue.identifier isEqualToString:segueMedioPago]) {
 //        MedioPagoViewController *vc = [segue destinationViewController];
 //        [vc setDelegate:self];
-    }
+//    }
     
 }
 
-#pragma mark - MontoDelegate
-
-- (void)onMontoConfirmed:(NSString *)monto {
-    selectedMonto = monto;
-    _montoDataView.datosLbl.text = [NSString stringWithFormat:@"$ %@", monto];
+- (IBAction)unwindFromMontoToPagar:(UIStoryboardSegue *)unwindSegue
+{
+    _montoDataView.datosLbl.text = [NSString stringWithFormat:@"$ %@", _selectedMonto];
 }
 
 @end

@@ -11,9 +11,11 @@
 #import "MontoViewController.h"
 #import "MedioPagoViewController.h"
 
-@interface PagarViewController : UIViewController <DataViewDelegate, MontoDelegate>
+@interface PagarViewController : UIViewController <DataViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UIView *datosViewContainer;
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *datosHeightConstraint;
+
+@property (strong, nonatomic) NSString *selectedMonto;
 
 @end

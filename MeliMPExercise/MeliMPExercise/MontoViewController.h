@@ -8,15 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol MontoDelegate <NSObject>
-
-- (void)onMontoConfirmed:(NSString *)monto;
-
-@end
-
 @interface MontoViewController : UIViewController <UITextFieldDelegate>
-
-@property (strong, nonatomic) id <MontoDelegate> delegate;
 
 @property (strong, nonatomic) IBOutlet UITextField *montoTf;
 @property (strong, nonatomic) IBOutlet UIButton *confirmBtn;
