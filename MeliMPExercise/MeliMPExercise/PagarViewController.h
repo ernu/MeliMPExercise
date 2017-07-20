@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DataView.h"
 #import "MontoViewController.h"
+#import "MedioPagoViewController.h"
 
 @interface PagarViewController : UIViewController <DataViewDelegate, MontoDelegate>
 

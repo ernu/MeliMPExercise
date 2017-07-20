@@ -9,6 +9,7 @@
 #import "PagarViewController.h"
 
 #define segueMonto                @"segueMonto"
+#define segueMedioPago                @"segueMedioPago"
 
 @interface PagarViewController() {
     NSString *selectedMonto;
@@ -108,6 +109,7 @@ typedef enum {
             break;
         case DataViewMedioPago:
             NSLog(@"MedioPagoTapped");
+            [self performSegueWithIdentifier:segueMedioPago sender:self];
             
             break;
         case DataViewBanco:
@@ -132,6 +134,9 @@ typedef enum {
     if ([segue.identifier isEqualToString:segueMonto]) {
         MontoViewController *vc = [segue destinationViewController];
         [vc setDelegate:self];
+    } else if ([segue.identifier isEqualToString:segueMedioPago]) {
+//        MedioPagoViewController *vc = [segue destinationViewController];
+//        [vc setDelegate:self];
     }
     
 }

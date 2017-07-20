@@ -108,6 +108,7 @@
                         <outlet property="datosHeightConstraint" destination="c9t-M5-4Zt" id="L2F-i6-Jr9"/>
                         <outlet property="datosViewContainer" destination="hdG-mL-359" id="DrM-9U-Pnw"/>
                         <segue destination="9I3-w4-YeD" kind="presentation" identifier="segueMonto" id="dSx-Uu-GMh"/>
+                        <segue destination="jeh-nY-rMC" kind="presentation" identifier="segueMedioPago" id="860-Jz-gpH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xur-9x-XLX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -167,7 +168,6 @@
                                 </state>
                                 <connections>
                                     <action selector="confirmBtnTapped:" destination="9I3-w4-YeD" eventType="touchUpInside" id="lkn-Bq-4Jr"/>
-                                    <action selector="pagarBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="erF-F5-9Uw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -194,6 +194,64 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pNC-I2-Txh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1773.5999999999999" y="14.842578710644679"/>
+        </scene>
+        <!--Medio Pago View Controller-->
+        <scene sceneID="a5Q-Pk-5Xh">
+            <objects>
+                <viewController id="jeh-nY-rMC" customClass="MedioPagoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LMK-RJ-HOy"/>
+                        <viewControllerLayoutGuide type="bottom" id="HxB-6t-pkg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8B9-9k-S0y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fx8-rr-Zbo">
+                                <rect key="frame" x="4" y="20" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="EZp-PB-B75"/>
+                                    <constraint firstAttribute="height" constant="50" id="U0P-fk-eub"/>
+                                </constraints>
+                                <state key="normal" image="closeBlue"/>
+                                <connections>
+                                    <action selector="closeBtnTapped:" destination="jeh-nY-rMC" eventType="touchUpInside" id="0V0-Yz-XB2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seleccione un medio de pago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="y2m-Qa-8VP">
+                                <rect key="frame" x="70" y="30" width="289" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="yTg-fn-8yb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.1764705882" green="0.20000000000000001" blue="0.46818006039999999" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2CT-wp-HEu">
+                                <rect key="frame" x="16" y="76" width="343" height="575"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.9445601106" blue="0.70728402999999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="y2m-Qa-8VP" firstAttribute="leading" secondItem="fx8-rr-Zbo" secondAttribute="trailing" constant="16" id="1bR-Rg-ViF"/>
+                            <constraint firstItem="HxB-6t-pkg" firstAttribute="top" secondItem="2CT-wp-HEu" secondAttribute="bottom" constant="16" id="8mA-Ns-AHn"/>
+                            <constraint firstItem="2CT-wp-HEu" firstAttribute="top" secondItem="y2m-Qa-8VP" secondAttribute="bottom" constant="16" id="AuD-fs-fWU"/>
+                            <constraint firstItem="y2m-Qa-8VP" firstAttribute="centerY" secondItem="fx8-rr-Zbo" secondAttribute="centerY" id="AvN-wH-Vca"/>
+                            <constraint firstItem="fx8-rr-Zbo" firstAttribute="top" secondItem="LMK-RJ-HOy" secondAttribute="bottom" id="IZB-ly-RUK"/>
+                            <constraint firstItem="2CT-wp-HEu" firstAttribute="leading" secondItem="8B9-9k-S0y" secondAttribute="leading" constant="16" id="QBM-UP-Wfu"/>
+                            <constraint firstItem="fx8-rr-Zbo" firstAttribute="leading" secondItem="8B9-9k-S0y" secondAttribute="leading" constant="4" id="bW9-IW-AZf"/>
+                            <constraint firstAttribute="trailing" secondItem="2CT-wp-HEu" secondAttribute="trailing" constant="16" id="llI-2d-6RD"/>
+                            <constraint firstAttribute="trailing" secondItem="y2m-Qa-8VP" secondAttribute="trailing" constant="16" id="sLs-Eb-OVl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="medioPagoTableView" destination="2CT-wp-HEu" id="aoC-zg-z5c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LF8-q9-ZYt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1774" y="775"/>
         </scene>
     </scenes>
     <resources>

@@ -22,6 +22,7 @@
 		63016C331F1FDD9000C7BDF7 /* PagarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63016C321F1FDD9000C7BDF7 /* PagarViewController.m */; };
 		63016C361F20F21F00C7BDF7 /* MontoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63016C351F20F21F00C7BDF7 /* MontoViewController.m */; };
 		63016C391F21021900C7BDF7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 63016C371F21021900C7BDF7 /* Localizable.strings */; };
+		63016C3C1F2107E600C7BDF7 /* MedioPagoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63016C3B1F2107E600C7BDF7 /* MedioPagoViewController.m */; };
 		AA5539B8DE5D62D46A1C041F /* libPods-MeliMPExercise.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF008703DC367F3A38E8AAF /* libPods-MeliMPExercise.a */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +73,8 @@
 		63016C341F20F21F00C7BDF7 /* MontoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MontoViewController.h; sourceTree = "<group>"; };
 		63016C351F20F21F00C7BDF7 /* MontoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MontoViewController.m; sourceTree = "<group>"; };
 		63016C381F21021900C7BDF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		63016C3A1F2107E600C7BDF7 /* MedioPagoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedioPagoViewController.h; sourceTree = "<group>"; };
+		63016C3B1F2107E600C7BDF7 /* MedioPagoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedioPagoViewController.m; sourceTree = "<group>"; };
 		6DF008703DC367F3A38E8AAF /* libPods-MeliMPExercise.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MeliMPExercise.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E34B8179BAA9FF64EE6689DE /* Pods-MeliMPExercise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeliMPExercise.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeliMPExercise/Pods-MeliMPExercise.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -186,6 +189,8 @@
 				63016C321F1FDD9000C7BDF7 /* PagarViewController.m */,
 				63016C341F20F21F00C7BDF7 /* MontoViewController.h */,
 				63016C351F20F21F00C7BDF7 /* MontoViewController.m */,
+				63016C3A1F2107E600C7BDF7 /* MedioPagoViewController.h */,
+				63016C3B1F2107E600C7BDF7 /* MedioPagoViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -427,6 +432,7 @@
 				63016BE71F1FA55F00C7BDF7 /* main.m in Sources */,
 				63016C361F20F21F00C7BDF7 /* MontoViewController.m in Sources */,
 				63016C301F1FD94000C7BDF7 /* DataView.m in Sources */,
+				63016C3C1F2107E600C7BDF7 /* MedioPagoViewController.m in Sources */,
 				63016C1A1F1FCC8A00C7BDF7 /* MainViewController.m in Sources */,
 				63016C291F1FD38F00C7BDF7 /* Constants.m in Sources */,
 			);
