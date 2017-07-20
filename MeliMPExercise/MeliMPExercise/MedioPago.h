@@ -13,6 +13,7 @@
 @property (strong, nonatomic) NSString *methodId;
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *thumbnail;
+@property (strong, nonatomic) NSString *paymentTypeId;
 
 - (instancetype)initWithDictionary:(NSDictionary*)dictionary;
 

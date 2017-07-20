@@ -12,9 +12,11 @@
 
 - (instancetype)initWithDictionary:(NSDictionary*)dictionary {
     if (self = [super init]) {
+        
         self.methodId = dictionary[@"id"];
         self.name = dictionary[@"name"];
         self.thumbnail = dictionary[@"thumbnail"];
+        self.paymentTypeId = dictionary[@"payment_type_id"];
     }
     return self;
 }
