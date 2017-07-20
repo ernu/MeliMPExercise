@@ -16,6 +16,6 @@
 
 - (instancetype)initWithDictionary:(NSDictionary*)dictionary;
 
-+ (NSArray<MedioPago *> *) dictArrayToModel:(NSArray *)dictArray;
++ (NSArray<MedioPago *> *) dictArrayToModelArray:(NSArray *)dictArray;
 
 @end

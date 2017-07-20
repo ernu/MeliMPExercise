@@ -19,7 +19,7 @@
     return self;
 }
 
-+ (NSArray<MedioPago *> *) dictArrayToModel:(NSArray *)dictArray {
++ (NSArray<MedioPago *> *) dictArrayToModelArray:(NSArray *)dictArray {
     
     NSMutableArray<MedioPago *> *mpArray = [[NSMutableArray<MedioPago *> alloc] init];
     

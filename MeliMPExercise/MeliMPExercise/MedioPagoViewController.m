@@ -62,7 +62,7 @@
         
         if ([responseObject isKindOfClass:[NSArray class]]) {
             NSArray *dictArray = (NSArray *)responseObject;
-            _medioPagoArray = [MedioPago dictArrayToModel:dictArray];
+            _medioPagoArray = [MedioPago dictArrayToModelArray:dictArray];
         }
         
         //TODO: popular tableview
