@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ServiceManager.h"
 
-@interface MedioPagoViewController : UIViewController
+@interface MedioPagoViewController : UIViewController <ServiceManagerDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *medioPagoTableView;
 

@@ -10,4 +10,8 @@
 
 @implementation Constants
 
+NSString *const kBaseUrl = @"https://api.mercadopago.com/v1/";
+NSString *const kPublicKey = @"444a9ef5-8a6b-429f-abdf-587639155d88";
+NSString *const kUriMedioPago = @"payment_methods";
+
 @end

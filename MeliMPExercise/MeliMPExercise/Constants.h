@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString *const kBaseUrl;
+extern NSString *const kPublicKey;
+extern NSString *const kUriMedioPago;
+
 @interface Constants : NSObject
 
 @end

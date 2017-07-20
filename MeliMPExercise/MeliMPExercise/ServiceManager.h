@@ -7,7 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RequestObject.h"
+
+@protocol ServiceManagerDelegate <NSObject>
+
+- (void)onResponseSuccess:(id)responseObject uri:(NSString *)uri;
+- (void)onResponseFailure:(NSError *)error uri:(NSString *)uri;
+
+@end
 
 @interface ServiceManager : NSObject
+
++ (instancetype)sharedInstance;
+
+@property (strong, nonatomic) id <ServiceManagerDelegate> delegate;
+
+- (void)callGETService:(NSString *)baseUrl request:(RequestObject *)request;
 
 @end
