@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MainViewController.h
 //  MeliMPExercise
 //
 //  Created by Ernesto Kim on 7/19/17.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface MainViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIButton *pagarBtn;
 
 @end
-

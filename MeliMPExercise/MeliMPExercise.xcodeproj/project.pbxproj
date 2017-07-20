@@ -9,12 +9,17 @@
 /* Begin PBXBuildFile section */
 		63016BE71F1FA55F00C7BDF7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63016BE61F1FA55F00C7BDF7 /* main.m */; };
 		63016BEA1F1FA55F00C7BDF7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63016BE91F1FA55F00C7BDF7 /* AppDelegate.m */; };
-		63016BED1F1FA55F00C7BDF7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63016BEC1F1FA55F00C7BDF7 /* ViewController.m */; };
 		63016BF01F1FA55F00C7BDF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63016BEE1F1FA55F00C7BDF7 /* Main.storyboard */; };
 		63016BF21F1FA55F00C7BDF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63016BF11F1FA55F00C7BDF7 /* Assets.xcassets */; };
 		63016BF51F1FA55F00C7BDF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63016BF31F1FA55F00C7BDF7 /* LaunchScreen.storyboard */; };
 		63016C001F1FA55F00C7BDF7 /* MeliMPExerciseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63016BFF1F1FA55F00C7BDF7 /* MeliMPExerciseTests.m */; };
 		63016C0B1F1FA55F00C7BDF7 /* MeliMPExerciseUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63016C0A1F1FA55F00C7BDF7 /* MeliMPExerciseUITests.m */; };
+		63016C1A1F1FCC8A00C7BDF7 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63016C191F1FCC8A00C7BDF7 /* MainViewController.m */; };
+		63016C251F1FD0FC00C7BDF7 /* UIColor+MELI.m in Sources */ = {isa = PBXBuildFile; fileRef = 63016C241F1FD0FC00C7BDF7 /* UIColor+MELI.m */; };
+		63016C291F1FD38F00C7BDF7 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 63016C281F1FD38F00C7BDF7 /* Constants.m */; };
+		63016C2C1F1FD8EC00C7BDF7 /* DataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63016C2B1F1FD8EC00C7BDF7 /* DataView.xib */; };
+		63016C301F1FD94000C7BDF7 /* DataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63016C2F1F1FD94000C7BDF7 /* DataView.m */; };
+		63016C331F1FDD9000C7BDF7 /* PagarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63016C321F1FDD9000C7BDF7 /* PagarViewController.m */; };
 		AA5539B8DE5D62D46A1C041F /* libPods-MeliMPExercise.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF008703DC367F3A38E8AAF /* libPods-MeliMPExercise.a */; };
 /* End PBXBuildFile section */
 
@@ -41,8 +46,6 @@
 		63016BE61F1FA55F00C7BDF7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		63016BE81F1FA55F00C7BDF7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		63016BE91F1FA55F00C7BDF7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		63016BEB1F1FA55F00C7BDF7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		63016BEC1F1FA55F00C7BDF7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		63016BEF1F1FA55F00C7BDF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		63016BF11F1FA55F00C7BDF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63016BF41F1FA55F00C7BDF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +56,17 @@
 		63016C061F1FA55F00C7BDF7 /* MeliMPExerciseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeliMPExerciseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63016C0A1F1FA55F00C7BDF7 /* MeliMPExerciseUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeliMPExerciseUITests.m; sourceTree = "<group>"; };
 		63016C0C1F1FA55F00C7BDF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63016C181F1FCC8A00C7BDF7 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		63016C191F1FCC8A00C7BDF7 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		63016C231F1FD0FC00C7BDF7 /* UIColor+MELI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MELI.h"; sourceTree = "<group>"; };
+		63016C241F1FD0FC00C7BDF7 /* UIColor+MELI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MELI.m"; sourceTree = "<group>"; };
+		63016C271F1FD38F00C7BDF7 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		63016C281F1FD38F00C7BDF7 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		63016C2B1F1FD8EC00C7BDF7 /* DataView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DataView.xib; sourceTree = "<group>"; };
+		63016C2E1F1FD94000C7BDF7 /* DataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataView.h; sourceTree = "<group>"; };
+		63016C2F1F1FD94000C7BDF7 /* DataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataView.m; sourceTree = "<group>"; };
+		63016C311F1FDD9000C7BDF7 /* PagarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PagarViewController.h; sourceTree = "<group>"; };
+		63016C321F1FDD9000C7BDF7 /* PagarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PagarViewController.m; sourceTree = "<group>"; };
 		6DF008703DC367F3A38E8AAF /* libPods-MeliMPExercise.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MeliMPExercise.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E34B8179BAA9FF64EE6689DE /* Pods-MeliMPExercise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeliMPExercise.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeliMPExercise/Pods-MeliMPExercise.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,9 +132,11 @@
 			children = (
 				63016BE81F1FA55F00C7BDF7 /* AppDelegate.h */,
 				63016BE91F1FA55F00C7BDF7 /* AppDelegate.m */,
-				63016BEB1F1FA55F00C7BDF7 /* ViewController.h */,
-				63016BEC1F1FA55F00C7BDF7 /* ViewController.m */,
-				63016BEE1F1FA55F00C7BDF7 /* Main.storyboard */,
+				63016C261F1FD36700C7BDF7 /* Utils */,
+				63016C1F1F1FD09000C7BDF7 /* Categories */,
+				63016C1B1F1FCC8F00C7BDF7 /* ViewController */,
+				63016C2D1F1FD92B00C7BDF7 /* Views */,
+				63016C2A1F1FD8CD00C7BDF7 /* Xib */,
 				63016BF11F1FA55F00C7BDF7 /* Assets.xcassets */,
 				63016BF31F1FA55F00C7BDF7 /* LaunchScreen.storyboard */,
 				63016BF61F1FA55F00C7BDF7 /* Info.plist */,
@@ -153,6 +169,53 @@
 				63016C0C1F1FA55F00C7BDF7 /* Info.plist */,
 			);
 			path = MeliMPExerciseUITests;
+			sourceTree = "<group>";
+		};
+		63016C1B1F1FCC8F00C7BDF7 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				63016C181F1FCC8A00C7BDF7 /* MainViewController.h */,
+				63016C191F1FCC8A00C7BDF7 /* MainViewController.m */,
+				63016C311F1FDD9000C7BDF7 /* PagarViewController.h */,
+				63016C321F1FDD9000C7BDF7 /* PagarViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		63016C1F1F1FD09000C7BDF7 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				63016C231F1FD0FC00C7BDF7 /* UIColor+MELI.h */,
+				63016C241F1FD0FC00C7BDF7 /* UIColor+MELI.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		63016C261F1FD36700C7BDF7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				63016C271F1FD38F00C7BDF7 /* Constants.h */,
+				63016C281F1FD38F00C7BDF7 /* Constants.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		63016C2A1F1FD8CD00C7BDF7 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				63016BEE1F1FA55F00C7BDF7 /* Main.storyboard */,
+				63016C2B1F1FD8EC00C7BDF7 /* DataView.xib */,
+			);
+			name = Xib;
+			sourceTree = "<group>";
+		};
+		63016C2D1F1FD92B00C7BDF7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				63016C2E1F1FD94000C7BDF7 /* DataView.h */,
+				63016C2F1F1FD94000C7BDF7 /* DataView.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		6794B4ABBDA9CB6D2AD21D8A /* Pods */ = {
@@ -273,6 +336,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63016C2C1F1FD8EC00C7BDF7 /* DataView.xib in Resources */,
 				63016BF51F1FA55F00C7BDF7 /* LaunchScreen.storyboard in Resources */,
 				63016BF21F1FA55F00C7BDF7 /* Assets.xcassets in Resources */,
 				63016BF01F1FA55F00C7BDF7 /* Main.storyboard in Resources */,
@@ -348,9 +412,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63016BED1F1FA55F00C7BDF7 /* ViewController.m in Sources */,
 				63016BEA1F1FA55F00C7BDF7 /* AppDelegate.m in Sources */,
+				63016C331F1FDD9000C7BDF7 /* PagarViewController.m in Sources */,
+				63016C251F1FD0FC00C7BDF7 /* UIColor+MELI.m in Sources */,
 				63016BE71F1FA55F00C7BDF7 /* main.m in Sources */,
+				63016C301F1FD94000C7BDF7 /* DataView.m in Sources */,
+				63016C1A1F1FCC8A00C7BDF7 /* MainViewController.m in Sources */,
+				63016C291F1FD38F00C7BDF7 /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,6 +654,7 @@
 				63016C111F1FA55F00C7BDF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		63016C121F1FA55F00C7BDF7 /* Build configuration list for PBXNativeTarget "MeliMPExerciseTests" */ = {
 			isa = XCConfigurationList;
@@ -594,6 +663,7 @@
 				63016C141F1FA55F00C7BDF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		63016C151F1FA55F00C7BDF7 /* Build configuration list for PBXNativeTarget "MeliMPExerciseUITests" */ = {
 			isa = XCConfigurationList;
@@ -602,6 +672,7 @@
 				63016C171F1FA55F00C7BDF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
