@@ -26,6 +26,7 @@
 		63016C401F210AD700C7BDF7 /* ServiceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 63016C3F1F210AD700C7BDF7 /* ServiceManager.m */; };
 		63016C431F212DDD00C7BDF7 /* MedioPagoRequestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 63016C421F212DDD00C7BDF7 /* MedioPagoRequestObject.m */; };
 		63016C461F212F8D00C7BDF7 /* RequestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 63016C451F212F8D00C7BDF7 /* RequestObject.m */; };
+		63016C4A1F213E0B00C7BDF7 /* MedioPago.m in Sources */ = {isa = PBXBuildFile; fileRef = 63016C491F213E0B00C7BDF7 /* MedioPago.m */; };
 		AA5539B8DE5D62D46A1C041F /* libPods-MeliMPExercise.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF008703DC367F3A38E8AAF /* libPods-MeliMPExercise.a */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +85,8 @@
 		63016C421F212DDD00C7BDF7 /* MedioPagoRequestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedioPagoRequestObject.m; sourceTree = "<group>"; };
 		63016C441F212F8D00C7BDF7 /* RequestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestObject.h; sourceTree = "<group>"; };
 		63016C451F212F8D00C7BDF7 /* RequestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestObject.m; sourceTree = "<group>"; };
+		63016C481F213E0B00C7BDF7 /* MedioPago.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedioPago.h; sourceTree = "<group>"; };
+		63016C491F213E0B00C7BDF7 /* MedioPago.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedioPago.m; sourceTree = "<group>"; };
 		6DF008703DC367F3A38E8AAF /* libPods-MeliMPExercise.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MeliMPExercise.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E34B8179BAA9FF64EE6689DE /* Pods-MeliMPExercise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeliMPExercise.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeliMPExercise/Pods-MeliMPExercise.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,6 +154,7 @@
 				63016BE91F1FA55F00C7BDF7 /* AppDelegate.m */,
 				63016C261F1FD36700C7BDF7 /* Utils */,
 				63016C1F1F1FD09000C7BDF7 /* Categories */,
+				63016C471F213DF200C7BDF7 /* Model */,
 				63016C3D1F210AA500C7BDF7 /* Service */,
 				63016C1B1F1FCC8F00C7BDF7 /* ViewController */,
 				63016C2D1F1FD92B00C7BDF7 /* Views */,
@@ -252,6 +256,15 @@
 				63016C421F212DDD00C7BDF7 /* MedioPagoRequestObject.m */,
 			);
 			name = Service;
+			sourceTree = "<group>";
+		};
+		63016C471F213DF200C7BDF7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				63016C481F213E0B00C7BDF7 /* MedioPago.h */,
+				63016C491F213E0B00C7BDF7 /* MedioPago.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		6794B4ABBDA9CB6D2AD21D8A /* Pods */ = {
@@ -459,6 +472,7 @@
 				63016C301F1FD94000C7BDF7 /* DataView.m in Sources */,
 				63016C3C1F2107E600C7BDF7 /* MedioPagoViewController.m in Sources */,
 				63016C401F210AD700C7BDF7 /* ServiceManager.m in Sources */,
+				63016C4A1F213E0B00C7BDF7 /* MedioPago.m in Sources */,
 				63016C1A1F1FCC8A00C7BDF7 /* MainViewController.m in Sources */,
 				63016C291F1FD38F00C7BDF7 /* Constants.m in Sources */,
 			);

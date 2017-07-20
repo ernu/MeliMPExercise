@@ -12,11 +12,14 @@
 #import "Constants.h"
 #import "AnimatedLoadingView.h"
 #import "UIColor+MELI.h"
+#import "MedioPago.h"
 
 @interface MedioPagoViewController () {
     AnimatedLoadingView *loadingView;
     BOOL firstLoad;
 }
+
+@property (strong, nonatomic) NSArray<MedioPago *> *medioPagoArray;
 
 @end
 
@@ -56,7 +59,12 @@
 
 - (void)onResponseSuccess:(id)responseObject uri:(NSString *)uri {
     if ([uri isEqualToString:kUriMedioPago]) {
-        //TODO: parsing
+        
+        if ([responseObject isKindOfClass:[NSArray class]]) {
+            NSArray *dictArray = (NSArray *)responseObject;
+            _medioPagoArray = [MedioPago dictArrayToModel:dictArray];
+        }
+        
         //TODO: popular tableview
     }
     
