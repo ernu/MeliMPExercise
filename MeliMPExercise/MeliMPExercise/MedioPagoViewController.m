@@ -80,7 +80,6 @@
             [_medioPagoTableView reloadData];
         }
         
-        //TODO: popular tableview
     }
     
     [loadingView stop];
