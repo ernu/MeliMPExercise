@@ -14,7 +14,7 @@
         <scene sceneID="BxQ-z1-IHY">
             <objects>
                 <navigationController id="0po-C5-4Ao" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="VHY-Yh-WOe">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="VHY-Yh-WOe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="1" green="0.9445601106" blue="0.30239036679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -34,7 +34,6 @@
         <!--MercadoPago-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="MainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
@@ -74,6 +73,7 @@
                         <segue destination="PaQ-Zk-Kp0" kind="show" identifier="seguePagar" id="VFg-KK-pjT"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="62" y="15"/>
         </scene>
@@ -249,9 +249,11 @@
                     </view>
                     <connections>
                         <outlet property="medioPagoTableView" destination="2CT-wp-HEu" id="aoC-zg-z5c"/>
+                        <segue destination="7pL-uE-taO" kind="unwind" identifier="unwindFromMedioPagoToPagar" unwindAction="unwindFromMedioPagoToPagar:" id="bt4-Fm-q3e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LF8-q9-ZYt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="7pL-uE-taO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1774" y="775"/>
         </scene>

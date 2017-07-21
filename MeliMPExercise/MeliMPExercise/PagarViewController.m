@@ -33,6 +33,7 @@ typedef enum {
     [super viewDidLoad];
     
     _selectedMonto = 0;
+    _selectedMedioPago = nil;
     
     [self initDatosViewContainer];
     
@@ -139,6 +140,13 @@ typedef enum {
 - (IBAction)unwindFromMontoToPagar:(UIStoryboardSegue *)unwindSegue
 {
     _montoDataView.datosLbl.text = [NSString stringWithFormat:@"$ %@", _selectedMonto];
+}
+
+- (IBAction)unwindFromMedioPagoToPagar:(UIStoryboardSegue *)unwindSegue
+{
+    _medioPagoDataView.datosLbl.text = _selectedMedioPago.name;
+    [_medioPagoDataView setImgWithUrl:_selectedMedioPago.thumbnail];
+    
 }
 
 @end

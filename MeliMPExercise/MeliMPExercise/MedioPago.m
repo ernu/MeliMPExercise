@@ -15,19 +15,21 @@
         
         self.methodId = dictionary[@"id"];
         self.name = dictionary[@"name"];
-        self.thumbnail = dictionary[@"thumbnail"];
+        self.thumbnail = dictionary[@"secure_thumbnail"];
         self.paymentTypeId = dictionary[@"payment_type_id"];
     }
     return self;
 }
 
-+ (NSArray<MedioPago *> *) dictArrayToModelArray:(NSArray *)dictArray {
++ (NSArray<MedioPago *> *)dictArrayToModelArrayCreditCard:(NSArray *)dictArray {
     
     NSMutableArray<MedioPago *> *mpArray = [[NSMutableArray<MedioPago *> alloc] init];
     
     for (NSDictionary *dict in dictArray) {
         MedioPago *mp = [[MedioPago alloc] initWithDictionary:dict];
-        [mpArray addObject:mp];
+        if ([mp.paymentTypeId isEqualToString:@"credit_card"]) {
+            [mpArray addObject:mp];
+        }
     }
     
     return mpArray;

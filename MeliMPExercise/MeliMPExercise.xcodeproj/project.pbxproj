@@ -27,6 +27,8 @@
 		63016C431F212DDD00C7BDF7 /* MedioPagoRequestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 63016C421F212DDD00C7BDF7 /* MedioPagoRequestObject.m */; };
 		63016C461F212F8D00C7BDF7 /* RequestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 63016C451F212F8D00C7BDF7 /* RequestObject.m */; };
 		63016C4A1F213E0B00C7BDF7 /* MedioPago.m in Sources */ = {isa = PBXBuildFile; fileRef = 63016C491F213E0B00C7BDF7 /* MedioPago.m */; };
+		6379F2DC1F22431A0048C54F /* MedioPagoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6379F2DA1F22431A0048C54F /* MedioPagoCell.m */; };
+		6379F2DD1F22431A0048C54F /* MedioPagoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6379F2DB1F22431A0048C54F /* MedioPagoCell.xib */; };
 		AA5539B8DE5D62D46A1C041F /* libPods-MeliMPExercise.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF008703DC367F3A38E8AAF /* libPods-MeliMPExercise.a */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +89,9 @@
 		63016C451F212F8D00C7BDF7 /* RequestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestObject.m; sourceTree = "<group>"; };
 		63016C481F213E0B00C7BDF7 /* MedioPago.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedioPago.h; sourceTree = "<group>"; };
 		63016C491F213E0B00C7BDF7 /* MedioPago.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedioPago.m; sourceTree = "<group>"; };
+		6379F2D91F22431A0048C54F /* MedioPagoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedioPagoCell.h; sourceTree = "<group>"; };
+		6379F2DA1F22431A0048C54F /* MedioPagoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedioPagoCell.m; sourceTree = "<group>"; };
+		6379F2DB1F22431A0048C54F /* MedioPagoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedioPagoCell.xib; sourceTree = "<group>"; };
 		6DF008703DC367F3A38E8AAF /* libPods-MeliMPExercise.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MeliMPExercise.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E34B8179BAA9FF64EE6689DE /* Pods-MeliMPExercise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeliMPExercise.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeliMPExercise/Pods-MeliMPExercise.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,6 +163,7 @@
 				63016C3D1F210AA500C7BDF7 /* Service */,
 				63016C1B1F1FCC8F00C7BDF7 /* ViewController */,
 				63016C2D1F1FD92B00C7BDF7 /* Views */,
+				6379F2D81F2242B10048C54F /* Cell */,
 				63016C2A1F1FD8CD00C7BDF7 /* Xib */,
 				63016BF11F1FA55F00C7BDF7 /* Assets.xcassets */,
 				63016BF31F1FA55F00C7BDF7 /* LaunchScreen.storyboard */,
@@ -265,6 +271,24 @@
 				63016C491F213E0B00C7BDF7 /* MedioPago.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		6379F2D81F2242B10048C54F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				6379F2DE1F2243240048C54F /* MedioPago */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		6379F2DE1F2243240048C54F /* MedioPago */ = {
+			isa = PBXGroup;
+			children = (
+				6379F2D91F22431A0048C54F /* MedioPagoCell.h */,
+				6379F2DA1F22431A0048C54F /* MedioPagoCell.m */,
+				6379F2DB1F22431A0048C54F /* MedioPagoCell.xib */,
+			);
+			name = MedioPago;
 			sourceTree = "<group>";
 		};
 		6794B4ABBDA9CB6D2AD21D8A /* Pods */ = {
@@ -390,6 +414,7 @@
 				63016BF21F1FA55F00C7BDF7 /* Assets.xcassets in Resources */,
 				63016BF01F1FA55F00C7BDF7 /* Main.storyboard in Resources */,
 				63016C391F21021900C7BDF7 /* Localizable.strings in Resources */,
+				6379F2DD1F22431A0048C54F /* MedioPagoCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +494,7 @@
 				63016BE71F1FA55F00C7BDF7 /* main.m in Sources */,
 				63016C361F20F21F00C7BDF7 /* MontoViewController.m in Sources */,
 				63016C461F212F8D00C7BDF7 /* RequestObject.m in Sources */,
+				6379F2DC1F22431A0048C54F /* MedioPagoCell.m in Sources */,
 				63016C301F1FD94000C7BDF7 /* DataView.m in Sources */,
 				63016C3C1F2107E600C7BDF7 /* MedioPagoViewController.m in Sources */,
 				63016C401F210AD700C7BDF7 /* ServiceManager.m in Sources */,

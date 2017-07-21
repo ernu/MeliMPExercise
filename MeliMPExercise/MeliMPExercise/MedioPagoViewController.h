@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ServiceManager.h"
 
-@interface MedioPagoViewController : UIViewController <ServiceManagerDelegate>
+@interface MedioPagoViewController : UIViewController <ServiceManagerDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) IBOutlet UITableView *medioPagoTableView;
 

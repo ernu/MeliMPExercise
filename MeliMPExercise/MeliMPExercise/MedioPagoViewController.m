@@ -13,10 +13,16 @@
 #import "AnimatedLoadingView.h"
 #import "UIColor+MELI.h"
 #import "MedioPago.h"
+#import "MedioPagoCell.h"
+#import "PagarViewController.h"
+
+#define unwindFromMedioPagoToPagar                @"unwindFromMedioPagoToPagar"
 
 @interface MedioPagoViewController () {
     AnimatedLoadingView *loadingView;
     BOOL firstLoad;
+    NSString *medioPagoReuseId;
+    MedioPago *selectedMedioPago;
 }
 
 @property (strong, nonatomic) NSArray<MedioPago *> *medioPagoArray;
@@ -32,6 +38,13 @@
     
     loadingView = [[AnimatedLoadingView alloc] initWithFrame:self.view.frame bgColor:[[UIColor blackColor] colorWithAlphaComponent:0.5] firstColor:[UIColor MELI_Blue] secondColor:[UIColor MELI_Yellow]];
     [self.view addSubview:loadingView];
+    
+    medioPagoReuseId = NSStringFromClass([MedioPagoCell class]);
+    
+    [_medioPagoTableView.layer setCornerRadius:5.0];
+    _medioPagoTableView.delegate = self;
+    _medioPagoTableView.dataSource = self;
+    [_medioPagoTableView registerNib:[UINib nibWithNibName:medioPagoReuseId bundle:[NSBundle mainBundle]] forCellReuseIdentifier:medioPagoReuseId];
     
     MedioPagoRequestObject *reqObject =  [[MedioPagoRequestObject alloc] init];
     ServiceManager *sm = [[ServiceManager alloc] init];
@@ -63,7 +76,8 @@
         
         if ([responseObject isKindOfClass:[NSArray class]]) {
             NSArray *dictArray = (NSArray *)responseObject;
-            _medioPagoArray = [MedioPago dictArrayToModelArray:dictArray];
+            _medioPagoArray = [MedioPago dictArrayToModelArrayCreditCard:dictArray];
+            [_medioPagoTableView reloadData];
         }
         
         //TODO: popular tableview
@@ -83,6 +97,50 @@
     }
     
     [loadingView stop];
+}
+
+#pragma TableView
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return _medioPagoArray.count;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [MedioPagoCell cellHeight];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    MedioPago *medioPago = [_medioPagoArray objectAtIndex:indexPath.row];
+    MedioPagoCell *cell = nil;
+    
+    cell = [tableView dequeueReusableCellWithIdentifier:medioPagoReuseId forIndexPath:indexPath];
+    if (!cell)
+    {
+        cell = [[MedioPagoCell alloc] init];
+        [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+    }
+    
+    [cell setData:medioPago];
+    
+    return cell;
+    
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    selectedMedioPago = [_medioPagoArray objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:unwindFromMedioPagoToPagar sender:self];
+    
+}
+
+#pragma mark - Storyboard
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:unwindFromMedioPagoToPagar]) {
+        PagarViewController *vc = [segue destinationViewController];
+        [vc setSelectedMedioPago:selectedMedioPago];
+    }
 }
 
 @end

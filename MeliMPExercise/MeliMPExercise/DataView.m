@@ -8,6 +8,7 @@
 
 #import "DataView.h"
 #import "UIColor+MELI.h"
+#import "UIImageView+WebCache.h"
 
 @interface DataView()
 
@@ -52,6 +53,11 @@ static CGFloat viewHeight = 50;
 
 + (CGFloat)viewHeight {
     return viewHeight;
+}
+
+- (void)setImgWithUrl:(NSString *)url {
+    [_img setHidden:false];
+    [_img sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:nil];
 }
 
 @end

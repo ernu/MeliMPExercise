@@ -23,5 +23,6 @@
 
 - (id)initWithData:(NSString *)data img:(UIImage *)img typeId:(int)typeId;
 + (CGFloat)viewHeight;
+- (void)setImgWithUrl:(NSString *)url;
 
 @end

@@ -17,6 +17,6 @@
 
 - (instancetype)initWithDictionary:(NSDictionary*)dictionary;
 
-+ (NSArray<MedioPago *> *) dictArrayToModelArray:(NSArray *)dictArray;
++ (NSArray<MedioPago *> *)dictArrayToModelArrayCreditCard:(NSArray *)dictArray;
 
 @end
