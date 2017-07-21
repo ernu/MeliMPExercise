@@ -34,8 +34,9 @@
     [self.view addSubview:loadingView];
     
     MedioPagoRequestObject *reqObject =  [[MedioPagoRequestObject alloc] init];
-    [ServiceManager sharedInstance].delegate = self;
-    [[ServiceManager sharedInstance] callGETService:kBaseUrl request:reqObject];
+    ServiceManager *sm = [[ServiceManager alloc] init];
+    sm.delegate = self;
+    [sm callGETService:kBaseUrl request:reqObject];
 
 }
 

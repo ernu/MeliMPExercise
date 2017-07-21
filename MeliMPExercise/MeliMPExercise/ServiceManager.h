@@ -18,8 +18,6 @@
 
 @interface ServiceManager : NSObject
 
-+ (instancetype)sharedInstance;
-
 @property (strong, nonatomic) id <ServiceManagerDelegate> delegate;
 
 - (void)callGETService:(NSString *)baseUrl request:(RequestObject *)request;
