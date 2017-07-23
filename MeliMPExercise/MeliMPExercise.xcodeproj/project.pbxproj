@@ -34,6 +34,7 @@
 		B19687601F24241B00FC16EC /* CuotaRequestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B196875F1F24241B00FC16EC /* CuotaRequestObject.m */; };
 		B19687631F24252A00FC16EC /* CuotaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B19687621F24252A00FC16EC /* CuotaViewController.m */; };
 		B1CA524C1F250499004388CF /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CA524B1F250499004388CF /* CustomButton.m */; };
+		B1CA524F1F250BD5004388CF /* NSString+MELI.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CA524E1F250BD5004388CF /* NSString+MELI.m */; };
 		B1DD8BF61F240E6E009D6DDB /* BancoRequestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B1DD8BF51F240E6E009D6DDB /* BancoRequestObject.m */; };
 		B1DD8BF91F240FDE009D6DDB /* BancoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1DD8BF81F240FDE009D6DDB /* BancoViewController.m */; };
 		B1DD8C021F241611009D6DDB /* Banco.m in Sources */ = {isa = PBXBuildFile; fileRef = B1DD8C011F241611009D6DDB /* Banco.m */; };
@@ -108,6 +109,8 @@
 		B19687621F24252A00FC16EC /* CuotaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CuotaViewController.m; sourceTree = "<group>"; };
 		B1CA524A1F250499004388CF /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
 		B1CA524B1F250499004388CF /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
+		B1CA524D1F250BD5004388CF /* NSString+MELI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MELI.h"; sourceTree = "<group>"; };
+		B1CA524E1F250BD5004388CF /* NSString+MELI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MELI.m"; sourceTree = "<group>"; };
 		B1DD8BF41F240E6E009D6DDB /* BancoRequestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BancoRequestObject.h; sourceTree = "<group>"; };
 		B1DD8BF51F240E6E009D6DDB /* BancoRequestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BancoRequestObject.m; sourceTree = "<group>"; };
 		B1DD8BF71F240FDE009D6DDB /* BancoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BancoViewController.h; sourceTree = "<group>"; };
@@ -245,6 +248,8 @@
 			children = (
 				63016C231F1FD0FC00C7BDF7 /* UIColor+MELI.h */,
 				63016C241F1FD0FC00C7BDF7 /* UIColor+MELI.m */,
+				B1CA524D1F250BD5004388CF /* NSString+MELI.h */,
+				B1CA524E1F250BD5004388CF /* NSString+MELI.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -537,6 +542,7 @@
 				63016C461F212F8D00C7BDF7 /* RequestObject.m in Sources */,
 				B19687631F24252A00FC16EC /* CuotaViewController.m in Sources */,
 				6379F2DC1F22431A0048C54F /* CommonCell.m in Sources */,
+				B1CA524F1F250BD5004388CF /* NSString+MELI.m in Sources */,
 				63016C301F1FD94000C7BDF7 /* DataView.m in Sources */,
 				63016C3C1F2107E600C7BDF7 /* MedioPagoViewController.m in Sources */,
 				63016C401F210AD700C7BDF7 /* ServiceManager.m in Sources */,

@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+#import "NSString+MELI.h"
 
 #define seguePagar                @"seguePagar"
 
@@ -28,7 +29,7 @@
 
 - (void)onDataConfirmed:(NSString *)monto medioPago:(MedioPago *)medioPago banco:(Banco *)banco cuota:(Cuota *)cuota {
     
-    NSString *paymentInfo = [NSString stringWithFormat:NSLocalizedString(@"TXT_PAYMENT_INFO_DESCRIPTION", nil), monto, medioPago.name, banco.name, cuota.msg];
+    NSString *paymentInfo = [NSString stringWithFormat:NSLocalizedString(@"TXT_PAYMENT_INFO_DESCRIPTION", nil), [NSString formatNumberStringToThousandString:monto], medioPago.name, banco.name, cuota.msg];
     
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"TXT_PAYMENT_INFO", nil) message:paymentInfo preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"TXT_ACCEPT", nil) style:UIAlertActionStyleDefault handler:nil];

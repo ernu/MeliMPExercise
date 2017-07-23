@@ -8,6 +8,7 @@
 
 #import "PagarViewController.h"
 #import "UIColor+MELI.h"
+#import "NSString+MELI.h"
 
 #define segueMonto                @"segueMonto"
 #define segueMedioPago            @"segueMedioPago"
@@ -188,7 +189,7 @@ typedef enum {
 
 - (IBAction)unwindFromMontoToPagar:(UIStoryboardSegue *)unwindSegue
 {
-    _montoDataView.datosLbl.text = [NSString stringWithFormat:@"$ %@", _selectedMonto];
+    _montoDataView.datosLbl.text = [NSString stringWithFormat:@"$ %@",[NSString formatNumberStringToThousandString:_selectedMonto]];
     _selectedCuota = nil;
     [self checkFilledData];
 }
