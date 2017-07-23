@@ -13,6 +13,7 @@
 @interface BancoViewController : UIViewController <ServiceManagerDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) IBOutlet UITableView *bancoTableView;
+@property (strong, nonatomic) IBOutlet UIView *noBancosView;
 
 @property (strong, nonatomic) MedioPago *selectedMedioPago;
 

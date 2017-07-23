@@ -76,7 +76,11 @@
         if ([responseObject isKindOfClass:[NSArray class]]) {
             NSArray *dictArray = (NSArray *)responseObject;
             _bancoArray = [Banco dictArrayToModelArray:dictArray];
-            [_bancoTableView reloadData];
+            if (_bancoArray.count > 0) {
+                [_bancoTableView reloadData];
+            } else {
+                _noBancosView.hidden = false;
+            }
         }
         
     }

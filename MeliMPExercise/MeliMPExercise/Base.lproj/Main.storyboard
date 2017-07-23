@@ -214,7 +214,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pNC-I2-Txh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="8hf-Ce-uVN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1773.5999999999999" y="14.842578710644679"/>
+            <point key="canvasLocation" x="1774" y="-984"/>
         </scene>
         <!--Medio Pago View Controller-->
         <scene sceneID="a5Q-Pk-5Xh">
@@ -274,7 +274,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LF8-q9-ZYt" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="7pL-uE-taO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1774" y="775"/>
+            <point key="canvasLocation" x="1774" y="-315"/>
         </scene>
         <!--Banco View Controller-->
         <scene sceneID="SCc-aX-XFI">
@@ -312,29 +312,51 @@
                                 <rect key="frame" x="16" y="76" width="343" height="575"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K9m-JB-v35">
+                                <rect key="frame" x="16" y="76" width="343" height="575"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No hay bancos para el medio de pago seleccionado, por favor seleccione otro medio de pago." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2RQ-7h-g5G">
+                                        <rect key="frame" x="16" y="254.5" width="311" height="66.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                        <color key="textColor" red="0.1764705882" green="0.20000000000000001" blue="0.46818006039999999" alpha="1" colorSpace="deviceRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="2RQ-7h-g5G" firstAttribute="leading" secondItem="K9m-JB-v35" secondAttribute="leading" constant="16" id="2lg-AI-DE8"/>
+                                    <constraint firstAttribute="trailing" secondItem="2RQ-7h-g5G" secondAttribute="trailing" constant="16" id="36c-0y-Wy4"/>
+                                    <constraint firstItem="2RQ-7h-g5G" firstAttribute="centerY" secondItem="K9m-JB-v35" secondAttribute="centerY" id="w8b-bj-nhc"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.9445601106" blue="0.70728402999999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="7OZ-TW-QcV" firstAttribute="top" secondItem="jTJ-xl-jsU" secondAttribute="bottom" constant="16" id="1se-aW-PCg"/>
+                            <constraint firstItem="K9m-JB-v35" firstAttribute="top" secondItem="7OZ-TW-QcV" secondAttribute="top" id="7LK-xA-mMd"/>
                             <constraint firstItem="icR-Bu-TDo" firstAttribute="leading" secondItem="3zG-NL-GP7" secondAttribute="leading" constant="4" id="7nr-t5-rpT"/>
+                            <constraint firstItem="K9m-JB-v35" firstAttribute="trailing" secondItem="7OZ-TW-QcV" secondAttribute="trailing" id="A1l-0A-HeY"/>
                             <constraint firstItem="jTJ-xl-jsU" firstAttribute="centerY" secondItem="icR-Bu-TDo" secondAttribute="centerY" id="AeD-1q-Hy2"/>
                             <constraint firstItem="ziF-JA-tjL" firstAttribute="top" secondItem="7OZ-TW-QcV" secondAttribute="bottom" constant="16" id="Fee-dv-wgx"/>
                             <constraint firstAttribute="trailing" secondItem="jTJ-xl-jsU" secondAttribute="trailing" constant="16" id="RWQ-M8-nrM"/>
                             <constraint firstItem="jTJ-xl-jsU" firstAttribute="leading" secondItem="icR-Bu-TDo" secondAttribute="trailing" constant="16" id="TYC-99-0Sw"/>
                             <constraint firstItem="7OZ-TW-QcV" firstAttribute="leading" secondItem="3zG-NL-GP7" secondAttribute="leading" constant="16" id="fNh-rz-Cef"/>
+                            <constraint firstItem="K9m-JB-v35" firstAttribute="leading" secondItem="7OZ-TW-QcV" secondAttribute="leading" id="ko2-Ez-kWp"/>
                             <constraint firstAttribute="trailing" secondItem="7OZ-TW-QcV" secondAttribute="trailing" constant="16" id="lHz-H4-Edf"/>
                             <constraint firstItem="icR-Bu-TDo" firstAttribute="top" secondItem="9C3-uk-Sp5" secondAttribute="bottom" id="oF5-IR-jfh"/>
+                            <constraint firstItem="K9m-JB-v35" firstAttribute="bottom" secondItem="7OZ-TW-QcV" secondAttribute="bottom" id="tYv-ft-a1p"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="bancoTableView" destination="7OZ-TW-QcV" id="QNh-61-OtP"/>
+                        <outlet property="noBancosView" destination="K9m-JB-v35" id="JhD-we-0AP"/>
                         <segue destination="pRZ-L1-LqA" kind="unwind" identifier="unwindFromBancoToPagar" unwindAction="unwindFromBancoToPagar:" id="ymC-BI-kAE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7bD-iN-UFD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="pRZ-L1-LqA" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1774" y="1474"/>
+            <point key="canvasLocation" x="1773.5999999999999" y="363.86806596701655"/>
         </scene>
         <!--Cuota View Controller-->
         <scene sceneID="r9V-Oz-JUD">
@@ -394,7 +416,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HL4-JZ-HIO" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="a4s-fq-4sQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1774" y="2167"/>
+            <point key="canvasLocation" x="1774" y="1031"/>
         </scene>
     </scenes>
     <resources>
