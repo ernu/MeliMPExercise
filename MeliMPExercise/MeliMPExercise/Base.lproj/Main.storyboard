@@ -95,15 +95,33 @@
                                     <constraint firstAttribute="height" constant="128" id="c9t-M5-4Zt"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Dl-J1-nny">
+                                <rect key="frame" x="36" y="160" width="303" height="50"/>
+                                <color key="backgroundColor" red="0.1764705882" green="0.20000000000000001" blue="0.46818006039999999" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="p8Q-5p-HHX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                <state key="normal" title="Confirmar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="confirmBtnTapped:" destination="PaQ-Zk-Kp0" eventType="touchUpInside" id="rlU-MS-Bfb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="1Dl-J1-nny" secondAttribute="trailing" constant="20" id="HGW-Vl-BSB"/>
                             <constraint firstItem="hdG-mL-359" firstAttribute="leading" secondItem="Ka3-nd-DZQ" secondAttribute="leading" id="SZG-ya-Amy"/>
+                            <constraint firstItem="1Dl-J1-nny" firstAttribute="leading" secondItem="Ka3-nd-DZQ" secondAttribute="leadingMargin" constant="20" id="XPm-yq-Xy4"/>
+                            <constraint firstItem="1Dl-J1-nny" firstAttribute="top" secondItem="hdG-mL-359" secondAttribute="bottom" constant="16" id="cDd-DN-6an"/>
                             <constraint firstAttribute="trailing" secondItem="hdG-mL-359" secondAttribute="trailing" id="lWv-o4-sfo"/>
                             <constraint firstItem="hdG-mL-359" firstAttribute="top" secondItem="0X9-ta-QbH" secondAttribute="bottom" constant="16" id="sVV-pn-NWo"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="confirmBtn" destination="1Dl-J1-nny" id="R3J-SJ-dDI"/>
                         <outlet property="datosHeightConstraint" destination="c9t-M5-4Zt" id="L2F-i6-Jr9"/>
                         <outlet property="datosViewContainer" destination="hdG-mL-359" id="DrM-9U-Pnw"/>
                         <segue destination="9I3-w4-YeD" kind="presentation" identifier="segueMonto" id="dSx-Uu-GMh"/>

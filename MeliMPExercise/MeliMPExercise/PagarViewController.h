@@ -20,6 +20,7 @@
 
 @property (strong, nonatomic) IBOutlet UIView *datosViewContainer;
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *datosHeightConstraint;
+@property (strong, nonatomic) IBOutlet UIButton *confirmBtn;
 
 @property (strong, nonatomic) NSString *selectedMonto;
 @property (strong, nonatomic) MedioPago *selectedMedioPago;

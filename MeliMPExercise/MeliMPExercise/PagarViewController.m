@@ -7,6 +7,7 @@
 //
 
 #import "PagarViewController.h"
+#import "UIColor+MELI.h"
 
 #define segueMonto                @"segueMonto"
 #define segueMedioPago            @"segueMedioPago"
@@ -37,7 +38,12 @@ typedef enum {
     _selectedMonto = 0;
     _selectedMedioPago = nil;
     
+    [_confirmBtn.layer setCornerRadius:5.0];
+    [_confirmBtn setEnabled:false];
+    [_confirmBtn setBackgroundColor:[UIColor MELI_LightGray]];
+    
     [self initDatosViewContainer];
+    [self checkFilledData];
     
 }
 
@@ -97,6 +103,43 @@ typedef enum {
     
 }
 
+- (BOOL)checkFilledData {
+    
+    BOOL allFilled = true;
+    [_bancoDataView setTapGestureActive:true];
+    [_cuotasDataView setTapGestureActive:true];
+    
+    if (!_selectedMedioPago) {
+        allFilled = false;
+        [_bancoDataView setTapGestureActive:false];
+        _bancoDataView.datosLbl.text = NSLocalizedString(@"TXT_SELECCIONE_BANCO", nil);
+    }
+    if (!_selectedMonto || [_selectedMonto intValue] == 0 || !_selectedBanco || !_selectedMedioPago) {
+        allFilled = false;
+        [_cuotasDataView setTapGestureActive:false];
+        _bancoDataView.datosLbl.text = NSLocalizedString(@"TXT_SELECCIONE_BANCO", nil);
+        _cuotasDataView.datosLbl.text = NSLocalizedString(@"TXT_SELECCIONE_CUOTAS", nil);
+    }
+    if (!_selectedCuota) {
+        allFilled = false;
+        _cuotasDataView.datosLbl.text = NSLocalizedString(@"TXT_SELECCIONE_CUOTAS", nil);
+    }
+    
+    if (allFilled) {
+        [_confirmBtn setEnabled:true];
+        [_confirmBtn setBackgroundColor:[UIColor MELI_Blue]];
+    } else {
+        [_confirmBtn setEnabled:false];
+        [_confirmBtn setBackgroundColor:[UIColor MELI_LightGray]];
+    }
+    
+    return allFilled;
+}
+
+- (IBAction)confirmBtnTapped:(id)sender {
+    //TODO: unwind
+}
+
 #pragma mark - DataViewDelegate
 
 - (void)onDataViewTapped:(int)typeId {
@@ -124,6 +167,7 @@ typedef enum {
             
             break;
         default:
+            NSLog(@"OtherTapped");
             
             break;
     }
@@ -149,24 +193,31 @@ typedef enum {
 - (IBAction)unwindFromMontoToPagar:(UIStoryboardSegue *)unwindSegue
 {
     _montoDataView.datosLbl.text = [NSString stringWithFormat:@"$ %@", _selectedMonto];
+    [self checkFilledData];
 }
 
 - (IBAction)unwindFromMedioPagoToPagar:(UIStoryboardSegue *)unwindSegue
 {
     _medioPagoDataView.datosLbl.text = _selectedMedioPago.name;
     [_medioPagoDataView setImgWithUrl:_selectedMedioPago.thumbnail];
+    _selectedBanco = nil;
+    _selectedCuota = nil;
+    [self checkFilledData];
     
 }
 
 - (IBAction)unwindFromBancoToPagar:(UIStoryboardSegue *)unwindSegue
 {
     _bancoDataView.datosLbl.text = _selectedBanco.name;
+    _selectedCuota = nil;
+    [self checkFilledData];
     
 }
 
 - (IBAction)unwindFromCuotaToPagar:(UIStoryboardSegue *)unwindSegue
 {
     _cuotasDataView.datosLbl.text = _selectedCuota.msg;
+    [self checkFilledData];
     
 }
 

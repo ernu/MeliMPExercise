@@ -32,7 +32,7 @@ static CGFloat cellHeight = 60;
     
     _name.text = name;
     
-    if (imgUrl != nil) {
+    if (imgUrl) {
         [_typeImg sd_setImageWithURL:[NSURL URLWithString:imgUrl] placeholderImage:nil];
     } else {
         [_typeImg removeFromSuperview];

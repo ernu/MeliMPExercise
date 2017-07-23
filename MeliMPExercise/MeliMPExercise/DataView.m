@@ -10,7 +10,9 @@
 #import "UIColor+MELI.h"
 #import "UIImageView+WebCache.h"
 
-@interface DataView()
+@interface DataView() {
+    UITapGestureRecognizer *tapGesture;
+}
 
 @property (nonatomic) int typeId;
 
@@ -39,7 +41,7 @@ static CGFloat viewHeight = 50;
             [_img setHidden:true];
         }
         
-        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap)];
+        tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap)];
         [self addGestureRecognizer:tapGesture];
         
     }
@@ -58,6 +60,16 @@ static CGFloat viewHeight = 50;
 - (void)setImgWithUrl:(NSString *)url {
     [_img setHidden:false];
     [_img sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:nil];
+}
+
+- (void)setTapGestureActive:(BOOL)enable {
+    if (enable) {
+        [self addGestureRecognizer:tapGesture];
+        [self setBackgroundColor:[UIColor whiteColor]];
+    } else {
+        [self removeGestureRecognizer:tapGesture];
+        [self setBackgroundColor:[UIColor MELI_LightGray]];
+    }
 }
 
 @end
