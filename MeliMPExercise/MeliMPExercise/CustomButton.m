@@ -18,7 +18,7 @@
     if (self) {
         [self.layer setCornerRadius:5.0];
         [self setBackgroundColor:[UIColor MELI_Blue]];
-        [self setTintColor:[UIColor whiteColor]];
+        [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         
     }
     
