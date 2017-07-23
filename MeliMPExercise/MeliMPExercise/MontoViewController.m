@@ -21,9 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [_confirmBtn.layer setCornerRadius:5.0];
     [_confirmBtn setEnabled:false];
-    [_confirmBtn setBackgroundColor:[UIColor MELI_LightGray]];
     
     _montoTf.delegate = self;
     [_montoTf becomeFirstResponder];
@@ -53,13 +51,7 @@
     NSArray  *arrayOfString = [number componentsSeparatedByString:@"."];
     if (([arrayOfString count] > 2) || (([arrayOfString count] == 2) && ([[arrayOfString objectAtIndex:1] length] > 2))) return NO;
     
-    if ([number length] > 0) {
-        [_confirmBtn setEnabled:true];
-        [_confirmBtn setBackgroundColor:[UIColor MELI_Blue]];
-    } else {
-        [_confirmBtn setEnabled:false];
-        [_confirmBtn setBackgroundColor:[UIColor MELI_LightGray]];
-    }
+    [_confirmBtn setEnabled:[number length] > 0];
     
     return YES;
 }

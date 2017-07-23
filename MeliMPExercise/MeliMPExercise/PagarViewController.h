@@ -15,6 +15,7 @@
 #import "MedioPago.h"
 #import "Banco.h"
 #import "Cuota.h"
+#import "CustomButton.h"
 
 @protocol PagarDelegate <NSObject>
 
@@ -26,7 +27,7 @@
 
 @property (strong, nonatomic) IBOutlet UIView *datosViewContainer;
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *datosHeightConstraint;
-@property (strong, nonatomic) IBOutlet UIButton *confirmBtn;
+@property (strong, nonatomic) IBOutlet CustomButton *confirmBtn;
 
 @property (strong, nonatomic) id <PagarDelegate> delegate;
 @property (strong, nonatomic) NSString *selectedMonto;

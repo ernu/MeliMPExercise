@@ -15,8 +15,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [_pagarBtn.layer setCornerRadius:5.0];
-    
 }
 
 - (void)didReceiveMemoryWarning {

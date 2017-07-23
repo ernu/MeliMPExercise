@@ -33,6 +33,7 @@
 		B196875D1F24224700FC16EC /* Cuota.m in Sources */ = {isa = PBXBuildFile; fileRef = B196875C1F24224700FC16EC /* Cuota.m */; };
 		B19687601F24241B00FC16EC /* CuotaRequestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B196875F1F24241B00FC16EC /* CuotaRequestObject.m */; };
 		B19687631F24252A00FC16EC /* CuotaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B19687621F24252A00FC16EC /* CuotaViewController.m */; };
+		B1CA524C1F250499004388CF /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CA524B1F250499004388CF /* CustomButton.m */; };
 		B1DD8BF61F240E6E009D6DDB /* BancoRequestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B1DD8BF51F240E6E009D6DDB /* BancoRequestObject.m */; };
 		B1DD8BF91F240FDE009D6DDB /* BancoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1DD8BF81F240FDE009D6DDB /* BancoViewController.m */; };
 		B1DD8C021F241611009D6DDB /* Banco.m in Sources */ = {isa = PBXBuildFile; fileRef = B1DD8C011F241611009D6DDB /* Banco.m */; };
@@ -105,6 +106,8 @@
 		B196875F1F24241B00FC16EC /* CuotaRequestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CuotaRequestObject.m; sourceTree = "<group>"; };
 		B19687611F24252A00FC16EC /* CuotaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CuotaViewController.h; sourceTree = "<group>"; };
 		B19687621F24252A00FC16EC /* CuotaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CuotaViewController.m; sourceTree = "<group>"; };
+		B1CA524A1F250499004388CF /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
+		B1CA524B1F250499004388CF /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
 		B1DD8BF41F240E6E009D6DDB /* BancoRequestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BancoRequestObject.h; sourceTree = "<group>"; };
 		B1DD8BF51F240E6E009D6DDB /* BancoRequestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BancoRequestObject.m; sourceTree = "<group>"; };
 		B1DD8BF71F240FDE009D6DDB /* BancoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BancoViewController.h; sourceTree = "<group>"; };
@@ -269,6 +272,8 @@
 			children = (
 				63016C2E1F1FD94000C7BDF7 /* DataView.h */,
 				63016C2F1F1FD94000C7BDF7 /* DataView.m */,
+				B1CA524A1F250499004388CF /* CustomButton.h */,
+				B1CA524B1F250499004388CF /* CustomButton.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -521,6 +526,7 @@
 				B196875D1F24224700FC16EC /* Cuota.m in Sources */,
 				B1DD8BF61F240E6E009D6DDB /* BancoRequestObject.m in Sources */,
 				63016BEA1F1FA55F00C7BDF7 /* AppDelegate.m in Sources */,
+				B1CA524C1F250499004388CF /* CustomButton.m in Sources */,
 				B1DD8BF91F240FDE009D6DDB /* BancoViewController.m in Sources */,
 				63016C431F212DDD00C7BDF7 /* MedioPagoRequestObject.m in Sources */,
 				63016C331F1FDD9000C7BDF7 /* PagarViewController.m in Sources */,

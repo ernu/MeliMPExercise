@@ -11,6 +11,4 @@
 
 @interface MainViewController : UIViewController <PagarDelegate>
 
-@property (strong, nonatomic) IBOutlet UIButton *pagarBtn;
-
 @end

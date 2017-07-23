@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CustomButton.h"
 
 @interface MontoViewController : UIViewController <UITextFieldDelegate>
 
 @property (strong, nonatomic) IBOutlet UITextField *montoTf;
-@property (strong, nonatomic) IBOutlet UIButton *confirmBtn;
+@property (strong, nonatomic) IBOutlet CustomButton *confirmBtn;
 
 @end

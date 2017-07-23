@@ -38,9 +38,7 @@ typedef enum {
     _selectedMonto = 0;
     _selectedMedioPago = nil;
     
-    [_confirmBtn.layer setCornerRadius:5.0];
     [_confirmBtn setEnabled:false];
-    [_confirmBtn setBackgroundColor:[UIColor MELI_LightGray]];
     
     [self initDatosViewContainer];
     [self checkFilledData];
@@ -127,13 +125,7 @@ typedef enum {
         _cuotasDataView.datosLbl.text = NSLocalizedString(@"TXT_SELECCIONE_CUOTAS", nil);
     }
     
-    if (allFilled) {
-        [_confirmBtn setEnabled:true];
-        [_confirmBtn setBackgroundColor:[UIColor MELI_Blue]];
-    } else {
-        [_confirmBtn setEnabled:false];
-        [_confirmBtn setBackgroundColor:[UIColor MELI_LightGray]];
-    }
+    [_confirmBtn setEnabled:allFilled];
     
     return allFilled;
 }
