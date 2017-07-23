@@ -117,7 +117,9 @@ typedef enum {
     if (!_selectedMonto || [_selectedMonto intValue] == 0 || !_selectedBanco || !_selectedMedioPago) {
         allFilled = false;
         [_cuotasDataView setTapGestureActive:false];
-        _bancoDataView.datosLbl.text = NSLocalizedString(@"TXT_SELECCIONE_BANCO", nil);
+        if (!_selectedBanco) {
+            _bancoDataView.datosLbl.text = NSLocalizedString(@"TXT_SELECCIONE_BANCO", nil);
+        }
         _cuotasDataView.datosLbl.text = NSLocalizedString(@"TXT_SELECCIONE_CUOTAS", nil);
     }
     if (!_selectedCuota) {
