@@ -16,12 +16,19 @@
 #import "Banco.h"
 #import "Cuota.h"
 
+@protocol PagarDelegate <NSObject>
+
+- (void)onDataConfirmed:(NSString *)monto medioPago:(MedioPago *)medioPago banco:(Banco *)banco cuota:(Cuota *)cuota;
+
+@end
+
 @interface PagarViewController : UIViewController <DataViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UIView *datosViewContainer;
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *datosHeightConstraint;
 @property (strong, nonatomic) IBOutlet UIButton *confirmBtn;
 
+@property (strong, nonatomic) id <PagarDelegate> delegate;
 @property (strong, nonatomic) NSString *selectedMonto;
 @property (strong, nonatomic) MedioPago *selectedMedioPago;
 @property (strong, nonatomic) Banco *selectedBanco;

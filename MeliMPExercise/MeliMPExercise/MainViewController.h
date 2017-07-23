@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PagarViewController.h"
 
-@interface MainViewController : UIViewController
+@interface MainViewController : UIViewController <PagarDelegate>
 
 @property (strong, nonatomic) IBOutlet UIButton *pagarBtn;
 

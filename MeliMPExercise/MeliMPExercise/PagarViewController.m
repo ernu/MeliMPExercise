@@ -137,7 +137,9 @@ typedef enum {
 }
 
 - (IBAction)confirmBtnTapped:(id)sender {
-    //TODO: unwind
+    
+    [self.navigationController popViewControllerAnimated:true];
+    [_delegate onDataConfirmed:_selectedMonto medioPago:_selectedMedioPago banco:_selectedBanco cuota:_selectedCuota];
 }
 
 #pragma mark - DataViewDelegate
@@ -193,6 +195,7 @@ typedef enum {
 - (IBAction)unwindFromMontoToPagar:(UIStoryboardSegue *)unwindSegue
 {
     _montoDataView.datosLbl.text = [NSString stringWithFormat:@"$ %@", _selectedMonto];
+    _selectedCuota = nil;
     [self checkFilledData];
 }
 

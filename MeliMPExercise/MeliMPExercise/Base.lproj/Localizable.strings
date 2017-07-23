@@ -12,3 +12,5 @@
 "TXT_SELECCIONE_CUOTAS" = "Seleccione la cantidad de cuotas";
 "TXT_ACCEPT" = "Aceptar";
 "TXT_ERROR" = "Error";
+"TXT_PAYMENT_INFO" = "Información del pago";
+"TXT_PAYMENT_INFO_DESCRIPTION" = "Monto: %@\nMedio de pago: %@\nBanco: %@\nPago:%@";
