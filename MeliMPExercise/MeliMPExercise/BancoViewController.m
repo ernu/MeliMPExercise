@@ -40,6 +40,7 @@
     
     bancoReuseId = NSStringFromClass([CommonCell class]);
     
+    [_noBancosView.layer setCornerRadius:5.0];
     [_bancoTableView.layer setCornerRadius:5.0];
     _bancoTableView.delegate = self;
     _bancoTableView.dataSource = self;
