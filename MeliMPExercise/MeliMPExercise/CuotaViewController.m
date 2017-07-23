@@ -1,34 +1,34 @@
 //
-//  MedioPagoViewController.m
+//  CuotaViewController.m
 //  MeliMPExercise
 //
-//  Created by Ernesto Kim on 7/20/17.
+//  Created by Ernesto Kim on 7/22/17.
 //  Copyright © 2017 Ernesto Kim. All rights reserved.
 //
 
-#import "MedioPagoViewController.h"
-#import "MedioPagoRequestObject.h"
+#import "CuotaViewController.h"
+#import "CuotaRequestObject.h"
 #import "Constants.h"
 #import "AnimatedLoadingView.h"
 #import "UIColor+MELI.h"
-#import "MedioPago.h"
+#import "Cuota.h"
 #import "CommonCell.h"
 #import "PagarViewController.h"
 
-#define unwindFromMedioPagoToPagar                @"unwindFromMedioPagoToPagar"
+#define unwindFromCuotaToPagar                @"unwindFromCuotaToPagar"
 
-@interface MedioPagoViewController () {
+@interface CuotaViewController () {
     AnimatedLoadingView *loadingView;
     BOOL firstLoad;
-    NSString *medioPagoReuseId;
-    MedioPago *selectedMedioPago;
+    NSString *cuotaReuseId;
+    Cuota *selectedCuota;
 }
 
-@property (strong, nonatomic) NSArray<MedioPago *> *medioPagoArray;
+@property (strong, nonatomic) NSArray<Cuota *> *cuotaArray;
 
 @end
 
-@implementation MedioPagoViewController
+@implementation CuotaViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -38,18 +38,18 @@
     loadingView = [[AnimatedLoadingView alloc] initWithFrame:self.view.frame bgColor:[[UIColor blackColor] colorWithAlphaComponent:0.5] firstColor:[UIColor MELI_Blue] secondColor:[UIColor MELI_Yellow]];
     [self.view addSubview:loadingView];
     
-    medioPagoReuseId = NSStringFromClass([CommonCell class]);
+    cuotaReuseId = NSStringFromClass([CommonCell class]);
     
-    [_medioPagoTableView.layer setCornerRadius:5.0];
-    _medioPagoTableView.delegate = self;
-    _medioPagoTableView.dataSource = self;
-    [_medioPagoTableView registerNib:[UINib nibWithNibName:medioPagoReuseId bundle:[NSBundle mainBundle]] forCellReuseIdentifier:medioPagoReuseId];
+    [_cuotaTableView.layer setCornerRadius:5.0];
+    _cuotaTableView.delegate = self;
+    _cuotaTableView.dataSource = self;
+    [_cuotaTableView registerNib:[UINib nibWithNibName:cuotaReuseId bundle:[NSBundle mainBundle]] forCellReuseIdentifier:cuotaReuseId];
     
-    MedioPagoRequestObject *reqObject =  [[MedioPagoRequestObject alloc] init];
+    CuotaRequestObject *reqObject = [[CuotaRequestObject alloc] initWithMedioPago:_selectedMedioPago banco:_selectedBanco monto:_selectedMonto];
     ServiceManager *sm = [[ServiceManager alloc] init];
     sm.delegate = self;
     [sm callGETService:kBaseUrl request:reqObject];
-
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -71,12 +71,12 @@
 #pragma mark - ServiceManagerDelegate
 
 - (void)onResponseSuccess:(id)responseObject uri:(NSString *)uri {
-    if ([uri isEqualToString:kUriMedioPago]) {
+    if ([uri isEqualToString:kUriCuota]) {
         
         if ([responseObject isKindOfClass:[NSArray class]]) {
             NSArray *dictArray = (NSArray *)responseObject;
-            _medioPagoArray = [MedioPago dictArrayToModelArrayCreditCard:dictArray];
-            [_medioPagoTableView reloadData];
+            _cuotaArray = [Cuota dictArrayToModelArray:dictArray];
+            [_cuotaTableView reloadData];
         }
         
     }
@@ -86,9 +86,9 @@
 
 - (void)onResponseFailure:(NSError *)error uri:(NSString *)uri {
     
-    if ([uri isEqualToString:kUriMedioPago]) {
+    if ([uri isEqualToString:kUriCuota]) {
         
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"TXT_ERROR", nil) message:error.description preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"TXT_ERROR", nil) message:error.localizedDescription preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *okAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"TXT_ACCEPT", nil) style:UIAlertActionStyleDefault handler:nil];
         [alert addAction:okAction];
         [self presentViewController:alert animated:YES completion:nil];
@@ -100,7 +100,7 @@
 #pragma TableView
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _medioPagoArray.count;
+    return _cuotaArray.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -109,17 +109,17 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    MedioPago *medioPago = [_medioPagoArray objectAtIndex:indexPath.row];
+    Cuota *cuota = [_cuotaArray objectAtIndex:indexPath.row];
     CommonCell *cell = nil;
     
-    cell = [tableView dequeueReusableCellWithIdentifier:medioPagoReuseId forIndexPath:indexPath];
+    cell = [tableView dequeueReusableCellWithIdentifier:cuotaReuseId forIndexPath:indexPath];
     if (!cell)
     {
         cell = [[CommonCell alloc] init];
         [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
     
-    [cell setData:medioPago.name img:medioPago.thumbnail];
+    [cell setData:cuota.msg img:nil];
     
     return cell;
     
@@ -127,17 +127,17 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    selectedMedioPago = [_medioPagoArray objectAtIndex:indexPath.row];
-    [self performSegueWithIdentifier:unwindFromMedioPagoToPagar sender:self];
+    selectedCuota = [_cuotaArray objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:unwindFromCuotaToPagar sender:self];
     
 }
 
 #pragma mark - Storyboard
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:unwindFromMedioPagoToPagar]) {
+    if ([segue.identifier isEqualToString:unwindFromCuotaToPagar]) {
         PagarViewController *vc = [segue destinationViewController];
-        [vc setSelectedMedioPago:selectedMedioPago];
+        [vc setSelectedCuota:selectedCuota];
     }
 }
 

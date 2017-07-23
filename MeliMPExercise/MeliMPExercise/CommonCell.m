@@ -1,17 +1,17 @@
 //
-//  MedioPagoCell.m
+//  CommonCell.m
 //  MeliMPExercise
 //
 //  Created by Ernesto Kim on 7/21/17.
 //  Copyright © 2017 Ernesto Kim. All rights reserved.
 //
 
-#import "MedioPagoCell.h"
+#import "CommonCell.h"
 #import "UIImageView+WebCache.h"
 
 static CGFloat cellHeight = 60;
 
-@implementation MedioPagoCell
+@implementation CommonCell
 
 - (id)init {
     
@@ -28,10 +28,15 @@ static CGFloat cellHeight = 60;
     return cellHeight;
 }
 
-- (void)setData:(MedioPago *)medioPago {
+-(void)setData:(NSString *)name img:(NSString *)imgUrl {
     
-    _name.text = medioPago.name;
-    [_typeImg sd_setImageWithURL:[NSURL URLWithString:medioPago.thumbnail] placeholderImage:nil];
+    _name.text = name;
+    
+    if (imgUrl != nil) {
+        [_typeImg sd_setImageWithURL:[NSURL URLWithString:imgUrl] placeholderImage:nil];
+    } else {
+        [_typeImg removeFromSuperview];
+    }
     
 }
 

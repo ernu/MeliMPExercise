@@ -11,6 +11,8 @@
 extern NSString *const kBaseUrl;
 extern NSString *const kPublicKey;
 extern NSString *const kUriMedioPago;
+extern NSString *const kUriBanco;
+extern NSString *const kUriCuota;
 
 @interface Constants : NSObject
 

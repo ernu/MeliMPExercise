@@ -27,9 +27,15 @@
 		63016C431F212DDD00C7BDF7 /* MedioPagoRequestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 63016C421F212DDD00C7BDF7 /* MedioPagoRequestObject.m */; };
 		63016C461F212F8D00C7BDF7 /* RequestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 63016C451F212F8D00C7BDF7 /* RequestObject.m */; };
 		63016C4A1F213E0B00C7BDF7 /* MedioPago.m in Sources */ = {isa = PBXBuildFile; fileRef = 63016C491F213E0B00C7BDF7 /* MedioPago.m */; };
-		6379F2DC1F22431A0048C54F /* MedioPagoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6379F2DA1F22431A0048C54F /* MedioPagoCell.m */; };
-		6379F2DD1F22431A0048C54F /* MedioPagoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6379F2DB1F22431A0048C54F /* MedioPagoCell.xib */; };
+		6379F2DC1F22431A0048C54F /* CommonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6379F2DA1F22431A0048C54F /* CommonCell.m */; };
+		6379F2DD1F22431A0048C54F /* CommonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6379F2DB1F22431A0048C54F /* CommonCell.xib */; };
 		AA5539B8DE5D62D46A1C041F /* libPods-MeliMPExercise.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF008703DC367F3A38E8AAF /* libPods-MeliMPExercise.a */; };
+		B196875D1F24224700FC16EC /* Cuota.m in Sources */ = {isa = PBXBuildFile; fileRef = B196875C1F24224700FC16EC /* Cuota.m */; };
+		B19687601F24241B00FC16EC /* CuotaRequestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B196875F1F24241B00FC16EC /* CuotaRequestObject.m */; };
+		B19687631F24252A00FC16EC /* CuotaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B19687621F24252A00FC16EC /* CuotaViewController.m */; };
+		B1DD8BF61F240E6E009D6DDB /* BancoRequestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B1DD8BF51F240E6E009D6DDB /* BancoRequestObject.m */; };
+		B1DD8BF91F240FDE009D6DDB /* BancoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1DD8BF81F240FDE009D6DDB /* BancoViewController.m */; };
+		B1DD8C021F241611009D6DDB /* Banco.m in Sources */ = {isa = PBXBuildFile; fileRef = B1DD8C011F241611009D6DDB /* Banco.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,10 +95,22 @@
 		63016C451F212F8D00C7BDF7 /* RequestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestObject.m; sourceTree = "<group>"; };
 		63016C481F213E0B00C7BDF7 /* MedioPago.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedioPago.h; sourceTree = "<group>"; };
 		63016C491F213E0B00C7BDF7 /* MedioPago.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedioPago.m; sourceTree = "<group>"; };
-		6379F2D91F22431A0048C54F /* MedioPagoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedioPagoCell.h; sourceTree = "<group>"; };
-		6379F2DA1F22431A0048C54F /* MedioPagoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedioPagoCell.m; sourceTree = "<group>"; };
-		6379F2DB1F22431A0048C54F /* MedioPagoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedioPagoCell.xib; sourceTree = "<group>"; };
+		6379F2D91F22431A0048C54F /* CommonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonCell.h; sourceTree = "<group>"; };
+		6379F2DA1F22431A0048C54F /* CommonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonCell.m; sourceTree = "<group>"; };
+		6379F2DB1F22431A0048C54F /* CommonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommonCell.xib; sourceTree = "<group>"; };
 		6DF008703DC367F3A38E8AAF /* libPods-MeliMPExercise.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MeliMPExercise.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B196875B1F24224700FC16EC /* Cuota.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cuota.h; sourceTree = "<group>"; };
+		B196875C1F24224700FC16EC /* Cuota.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cuota.m; sourceTree = "<group>"; };
+		B196875E1F24241B00FC16EC /* CuotaRequestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CuotaRequestObject.h; sourceTree = "<group>"; };
+		B196875F1F24241B00FC16EC /* CuotaRequestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CuotaRequestObject.m; sourceTree = "<group>"; };
+		B19687611F24252A00FC16EC /* CuotaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CuotaViewController.h; sourceTree = "<group>"; };
+		B19687621F24252A00FC16EC /* CuotaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CuotaViewController.m; sourceTree = "<group>"; };
+		B1DD8BF41F240E6E009D6DDB /* BancoRequestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BancoRequestObject.h; sourceTree = "<group>"; };
+		B1DD8BF51F240E6E009D6DDB /* BancoRequestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BancoRequestObject.m; sourceTree = "<group>"; };
+		B1DD8BF71F240FDE009D6DDB /* BancoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BancoViewController.h; sourceTree = "<group>"; };
+		B1DD8BF81F240FDE009D6DDB /* BancoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BancoViewController.m; sourceTree = "<group>"; };
+		B1DD8C001F241611009D6DDB /* Banco.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Banco.h; sourceTree = "<group>"; };
+		B1DD8C011F241611009D6DDB /* Banco.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Banco.m; sourceTree = "<group>"; };
 		E34B8179BAA9FF64EE6689DE /* Pods-MeliMPExercise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeliMPExercise.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeliMPExercise/Pods-MeliMPExercise.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -211,6 +229,10 @@
 				63016C351F20F21F00C7BDF7 /* MontoViewController.m */,
 				63016C3A1F2107E600C7BDF7 /* MedioPagoViewController.h */,
 				63016C3B1F2107E600C7BDF7 /* MedioPagoViewController.m */,
+				B1DD8BF71F240FDE009D6DDB /* BancoViewController.h */,
+				B1DD8BF81F240FDE009D6DDB /* BancoViewController.m */,
+				B19687611F24252A00FC16EC /* CuotaViewController.h */,
+				B19687621F24252A00FC16EC /* CuotaViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -260,6 +282,10 @@
 				63016C451F212F8D00C7BDF7 /* RequestObject.m */,
 				63016C411F212DDD00C7BDF7 /* MedioPagoRequestObject.h */,
 				63016C421F212DDD00C7BDF7 /* MedioPagoRequestObject.m */,
+				B1DD8BF41F240E6E009D6DDB /* BancoRequestObject.h */,
+				B1DD8BF51F240E6E009D6DDB /* BancoRequestObject.m */,
+				B196875E1F24241B00FC16EC /* CuotaRequestObject.h */,
+				B196875F1F24241B00FC16EC /* CuotaRequestObject.m */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -269,6 +295,10 @@
 			children = (
 				63016C481F213E0B00C7BDF7 /* MedioPago.h */,
 				63016C491F213E0B00C7BDF7 /* MedioPago.m */,
+				B1DD8C001F241611009D6DDB /* Banco.h */,
+				B1DD8C011F241611009D6DDB /* Banco.m */,
+				B196875B1F24224700FC16EC /* Cuota.h */,
+				B196875C1F24224700FC16EC /* Cuota.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -276,19 +306,19 @@
 		6379F2D81F2242B10048C54F /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				6379F2DE1F2243240048C54F /* MedioPago */,
+				6379F2DE1F2243240048C54F /* CommonCell */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
 		};
-		6379F2DE1F2243240048C54F /* MedioPago */ = {
+		6379F2DE1F2243240048C54F /* CommonCell */ = {
 			isa = PBXGroup;
 			children = (
-				6379F2D91F22431A0048C54F /* MedioPagoCell.h */,
-				6379F2DA1F22431A0048C54F /* MedioPagoCell.m */,
-				6379F2DB1F22431A0048C54F /* MedioPagoCell.xib */,
+				6379F2D91F22431A0048C54F /* CommonCell.h */,
+				6379F2DA1F22431A0048C54F /* CommonCell.m */,
+				6379F2DB1F22431A0048C54F /* CommonCell.xib */,
 			);
-			name = MedioPago;
+			name = CommonCell;
 			sourceTree = "<group>";
 		};
 		6794B4ABBDA9CB6D2AD21D8A /* Pods */ = {
@@ -370,6 +400,7 @@
 				TargetAttributes = {
 					63016BE11F1FA55F00C7BDF7 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = VGWH7F224V;
 						ProvisioningStyle = Automatic;
 					};
 					63016BFA1F1FA55F00C7BDF7 = {
@@ -414,7 +445,7 @@
 				63016BF21F1FA55F00C7BDF7 /* Assets.xcassets in Resources */,
 				63016BF01F1FA55F00C7BDF7 /* Main.storyboard in Resources */,
 				63016C391F21021900C7BDF7 /* Localizable.strings in Resources */,
-				6379F2DD1F22431A0048C54F /* MedioPagoCell.xib in Resources */,
+				6379F2DD1F22431A0048C54F /* CommonCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,17 +518,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B196875D1F24224700FC16EC /* Cuota.m in Sources */,
+				B1DD8BF61F240E6E009D6DDB /* BancoRequestObject.m in Sources */,
 				63016BEA1F1FA55F00C7BDF7 /* AppDelegate.m in Sources */,
+				B1DD8BF91F240FDE009D6DDB /* BancoViewController.m in Sources */,
 				63016C431F212DDD00C7BDF7 /* MedioPagoRequestObject.m in Sources */,
 				63016C331F1FDD9000C7BDF7 /* PagarViewController.m in Sources */,
+				B1DD8C021F241611009D6DDB /* Banco.m in Sources */,
 				63016C251F1FD0FC00C7BDF7 /* UIColor+MELI.m in Sources */,
 				63016BE71F1FA55F00C7BDF7 /* main.m in Sources */,
 				63016C361F20F21F00C7BDF7 /* MontoViewController.m in Sources */,
 				63016C461F212F8D00C7BDF7 /* RequestObject.m in Sources */,
-				6379F2DC1F22431A0048C54F /* MedioPagoCell.m in Sources */,
+				B19687631F24252A00FC16EC /* CuotaViewController.m in Sources */,
+				6379F2DC1F22431A0048C54F /* CommonCell.m in Sources */,
 				63016C301F1FD94000C7BDF7 /* DataView.m in Sources */,
 				63016C3C1F2107E600C7BDF7 /* MedioPagoViewController.m in Sources */,
 				63016C401F210AD700C7BDF7 /* ServiceManager.m in Sources */,
+				B19687601F24241B00FC16EC /* CuotaRequestObject.m in Sources */,
 				63016C4A1F213E0B00C7BDF7 /* MedioPago.m in Sources */,
 				63016C1A1F1FCC8A00C7BDF7 /* MainViewController.m in Sources */,
 				63016C291F1FD38F00C7BDF7 /* Constants.m in Sources */,
@@ -604,7 +641,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -647,7 +684,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -660,6 +697,7 @@
 			baseConfigurationReference = E34B8179BAA9FF64EE6689DE /* Pods-MeliMPExercise.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VGWH7F224V;
 				INFOPLIST_FILE = MeliMPExercise/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ernu.MeliMPExercise;
@@ -672,6 +710,7 @@
 			baseConfigurationReference = 2589AA287D6FD872DA33BFAE /* Pods-MeliMPExercise.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VGWH7F224V;
 				INFOPLIST_FILE = MeliMPExercise/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ernu.MeliMPExercise;

@@ -1,34 +1,34 @@
 //
-//  MedioPagoViewController.m
+//  BancoViewController.m
 //  MeliMPExercise
 //
-//  Created by Ernesto Kim on 7/20/17.
+//  Created by Ernesto Kim on 7/22/17.
 //  Copyright © 2017 Ernesto Kim. All rights reserved.
 //
 
-#import "MedioPagoViewController.h"
-#import "MedioPagoRequestObject.h"
+#import "BancoViewController.h"
+#import "BancoRequestObject.h"
 #import "Constants.h"
 #import "AnimatedLoadingView.h"
 #import "UIColor+MELI.h"
-#import "MedioPago.h"
+#import "Banco.h"
 #import "CommonCell.h"
 #import "PagarViewController.h"
 
-#define unwindFromMedioPagoToPagar                @"unwindFromMedioPagoToPagar"
+#define unwindFromBancoToPagar                @"unwindFromBancoToPagar"
 
-@interface MedioPagoViewController () {
+@interface BancoViewController () {
     AnimatedLoadingView *loadingView;
     BOOL firstLoad;
-    NSString *medioPagoReuseId;
-    MedioPago *selectedMedioPago;
+    NSString *bancoReuseId;
+    Banco *selectedBanco;
 }
 
-@property (strong, nonatomic) NSArray<MedioPago *> *medioPagoArray;
+@property (strong, nonatomic) NSArray<Banco *> *bancoArray;
 
 @end
 
-@implementation MedioPagoViewController
+@implementation BancoViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -38,18 +38,18 @@
     loadingView = [[AnimatedLoadingView alloc] initWithFrame:self.view.frame bgColor:[[UIColor blackColor] colorWithAlphaComponent:0.5] firstColor:[UIColor MELI_Blue] secondColor:[UIColor MELI_Yellow]];
     [self.view addSubview:loadingView];
     
-    medioPagoReuseId = NSStringFromClass([CommonCell class]);
+    bancoReuseId = NSStringFromClass([CommonCell class]);
     
-    [_medioPagoTableView.layer setCornerRadius:5.0];
-    _medioPagoTableView.delegate = self;
-    _medioPagoTableView.dataSource = self;
-    [_medioPagoTableView registerNib:[UINib nibWithNibName:medioPagoReuseId bundle:[NSBundle mainBundle]] forCellReuseIdentifier:medioPagoReuseId];
+    [_bancoTableView.layer setCornerRadius:5.0];
+    _bancoTableView.delegate = self;
+    _bancoTableView.dataSource = self;
+    [_bancoTableView registerNib:[UINib nibWithNibName:bancoReuseId bundle:[NSBundle mainBundle]] forCellReuseIdentifier:bancoReuseId];
     
-    MedioPagoRequestObject *reqObject =  [[MedioPagoRequestObject alloc] init];
+    BancoRequestObject *reqObject = [[BancoRequestObject alloc] initWithMedioPago:_selectedMedioPago];
     ServiceManager *sm = [[ServiceManager alloc] init];
     sm.delegate = self;
     [sm callGETService:kBaseUrl request:reqObject];
-
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -71,12 +71,12 @@
 #pragma mark - ServiceManagerDelegate
 
 - (void)onResponseSuccess:(id)responseObject uri:(NSString *)uri {
-    if ([uri isEqualToString:kUriMedioPago]) {
+    if ([uri isEqualToString:kUriBanco]) {
         
         if ([responseObject isKindOfClass:[NSArray class]]) {
             NSArray *dictArray = (NSArray *)responseObject;
-            _medioPagoArray = [MedioPago dictArrayToModelArrayCreditCard:dictArray];
-            [_medioPagoTableView reloadData];
+            _bancoArray = [Banco dictArrayToModelArray:dictArray];
+            [_bancoTableView reloadData];
         }
         
     }
@@ -86,9 +86,9 @@
 
 - (void)onResponseFailure:(NSError *)error uri:(NSString *)uri {
     
-    if ([uri isEqualToString:kUriMedioPago]) {
+    if ([uri isEqualToString:kUriBanco]) {
         
-        UIAlertController *alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"TXT_ERROR", nil) message:error.description preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"TXT_ERROR", nil) message:error.localizedDescription preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *okAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"TXT_ACCEPT", nil) style:UIAlertActionStyleDefault handler:nil];
         [alert addAction:okAction];
         [self presentViewController:alert animated:YES completion:nil];
@@ -100,7 +100,7 @@
 #pragma TableView
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _medioPagoArray.count;
+    return _bancoArray.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -109,17 +109,17 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    MedioPago *medioPago = [_medioPagoArray objectAtIndex:indexPath.row];
+    Banco *banco = [_bancoArray objectAtIndex:indexPath.row];
     CommonCell *cell = nil;
     
-    cell = [tableView dequeueReusableCellWithIdentifier:medioPagoReuseId forIndexPath:indexPath];
+    cell = [tableView dequeueReusableCellWithIdentifier:bancoReuseId forIndexPath:indexPath];
     if (!cell)
     {
         cell = [[CommonCell alloc] init];
         [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
     
-    [cell setData:medioPago.name img:medioPago.thumbnail];
+    [cell setData:banco.name img:nil];
     
     return cell;
     
@@ -127,17 +127,17 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    selectedMedioPago = [_medioPagoArray objectAtIndex:indexPath.row];
-    [self performSegueWithIdentifier:unwindFromMedioPagoToPagar sender:self];
+    selectedBanco = [_bancoArray objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:unwindFromBancoToPagar sender:self];
     
 }
 
 #pragma mark - Storyboard
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:unwindFromMedioPagoToPagar]) {
+    if ([segue.identifier isEqualToString:unwindFromBancoToPagar]) {
         PagarViewController *vc = [segue destinationViewController];
-        [vc setSelectedMedioPago:selectedMedioPago];
+        [vc setSelectedBanco:selectedBanco];
     }
 }
 

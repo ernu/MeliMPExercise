@@ -10,6 +10,8 @@
 
 #define segueMonto                @"segueMonto"
 #define segueMedioPago            @"segueMedioPago"
+#define segueBanco                @"segueBanco"
+#define segueCuota                @"segueCuota"
 
 @interface PagarViewController()
 
@@ -113,10 +115,12 @@ typedef enum {
             break;
         case DataViewBanco:
             NSLog(@"BancoTapped");
+            [self performSegueWithIdentifier:segueBanco sender:self];
             
             break;
         case DataViewCuotas:
             NSLog(@"CuotasTapped");
+            [self performSegueWithIdentifier:segueCuota sender:self];
             
             break;
         default:
@@ -130,10 +134,15 @@ typedef enum {
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-//    if ([segue.identifier isEqualToString:segueMedioPago]) {
-//        MedioPagoViewController *vc = [segue destinationViewController];
-//        [vc setDelegate:self];
-//    }
+    if ([segue.identifier isEqualToString:segueBanco]) {
+        BancoViewController *vc = [segue destinationViewController];
+        [vc setSelectedMedioPago:_selectedMedioPago];
+    } else if ([segue.identifier isEqualToString:segueCuota]) {
+        CuotaViewController *vc = [segue destinationViewController];
+        [vc setSelectedMedioPago:_selectedMedioPago];
+        [vc setSelectedBanco:_selectedBanco];
+        [vc setSelectedMonto:_selectedMonto];
+    }
     
 }
 
@@ -146,6 +155,18 @@ typedef enum {
 {
     _medioPagoDataView.datosLbl.text = _selectedMedioPago.name;
     [_medioPagoDataView setImgWithUrl:_selectedMedioPago.thumbnail];
+    
+}
+
+- (IBAction)unwindFromBancoToPagar:(UIStoryboardSegue *)unwindSegue
+{
+    _bancoDataView.datosLbl.text = _selectedBanco.name;
+    
+}
+
+- (IBAction)unwindFromCuotaToPagar:(UIStoryboardSegue *)unwindSegue
+{
+    _cuotasDataView.datosLbl.text = _selectedCuota.msg;
     
 }
 

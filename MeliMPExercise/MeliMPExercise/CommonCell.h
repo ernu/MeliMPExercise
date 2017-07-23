@@ -1,5 +1,5 @@
 //
-//  MedioPagoCell.h
+//  CommonCell.h
 //  MeliMPExercise
 //
 //  Created by Ernesto Kim on 7/21/17.
@@ -7,14 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MedioPago.h"
 
-@interface MedioPagoCell : UITableViewCell
+@interface CommonCell : UITableViewCell
 
 @property (strong, nonatomic) IBOutlet UIImageView *typeImg;
 @property (strong, nonatomic) IBOutlet UILabel *name;
 
 +(CGFloat)cellHeight;
--(void)setData:(MedioPago *)medioPago;
+-(void)setData:(NSString *)name img:(NSString *)imgUrl;
 
 @end

@@ -10,7 +10,11 @@
 #import "DataView.h"
 #import "MontoViewController.h"
 #import "MedioPagoViewController.h"
+#import "BancoViewController.h"
+#import "CuotaViewController.h"
 #import "MedioPago.h"
+#import "Banco.h"
+#import "Cuota.h"
 
 @interface PagarViewController : UIViewController <DataViewDelegate>
 
@@ -19,5 +23,7 @@
 
 @property (strong, nonatomic) NSString *selectedMonto;
 @property (strong, nonatomic) MedioPago *selectedMedioPago;
+@property (strong, nonatomic) Banco *selectedBanco;
+@property (strong, nonatomic) Cuota *selectedCuota;
 
 @end
