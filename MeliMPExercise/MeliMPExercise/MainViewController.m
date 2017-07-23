@@ -27,6 +27,8 @@
     [self performSegueWithIdentifier:seguePagar sender:self];
 }
 
+#pragma mark - PagarDelegate
+
 - (void)onDataConfirmed:(NSString *)monto medioPago:(MedioPago *)medioPago banco:(Banco *)banco cuota:(Cuota *)cuota {
     
     NSString *paymentInfo = [NSString stringWithFormat:NSLocalizedString(@"TXT_PAYMENT_INFO_DESCRIPTION", nil), [NSString formatNumberStringToThousandString:monto], medioPago.name, banco.name, cuota.msg];

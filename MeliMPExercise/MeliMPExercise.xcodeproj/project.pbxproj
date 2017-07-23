@@ -12,8 +12,6 @@
 		63016BF01F1FA55F00C7BDF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63016BEE1F1FA55F00C7BDF7 /* Main.storyboard */; };
 		63016BF21F1FA55F00C7BDF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63016BF11F1FA55F00C7BDF7 /* Assets.xcassets */; };
 		63016BF51F1FA55F00C7BDF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63016BF31F1FA55F00C7BDF7 /* LaunchScreen.storyboard */; };
-		63016C001F1FA55F00C7BDF7 /* MeliMPExerciseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63016BFF1F1FA55F00C7BDF7 /* MeliMPExerciseTests.m */; };
-		63016C0B1F1FA55F00C7BDF7 /* MeliMPExerciseUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63016C0A1F1FA55F00C7BDF7 /* MeliMPExerciseUITests.m */; };
 		63016C1A1F1FCC8A00C7BDF7 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63016C191F1FCC8A00C7BDF7 /* MainViewController.m */; };
 		63016C251F1FD0FC00C7BDF7 /* UIColor+MELI.m in Sources */ = {isa = PBXBuildFile; fileRef = 63016C241F1FD0FC00C7BDF7 /* UIColor+MELI.m */; };
 		63016C291F1FD38F00C7BDF7 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 63016C281F1FD38F00C7BDF7 /* Constants.m */; };
@@ -68,11 +66,7 @@
 		63016BF41F1FA55F00C7BDF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63016BF61F1FA55F00C7BDF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63016BFB1F1FA55F00C7BDF7 /* MeliMPExerciseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeliMPExerciseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		63016BFF1F1FA55F00C7BDF7 /* MeliMPExerciseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeliMPExerciseTests.m; sourceTree = "<group>"; };
-		63016C011F1FA55F00C7BDF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63016C061F1FA55F00C7BDF7 /* MeliMPExerciseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeliMPExerciseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		63016C0A1F1FA55F00C7BDF7 /* MeliMPExerciseUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeliMPExerciseUITests.m; sourceTree = "<group>"; };
-		63016C0C1F1FA55F00C7BDF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63016C181F1FCC8A00C7BDF7 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		63016C191F1FCC8A00C7BDF7 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		63016C231F1FD0FC00C7BDF7 /* UIColor+MELI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MELI.h"; sourceTree = "<group>"; };
@@ -158,8 +152,6 @@
 			isa = PBXGroup;
 			children = (
 				63016BE41F1FA55F00C7BDF7 /* MeliMPExercise */,
-				63016BFE1F1FA55F00C7BDF7 /* MeliMPExerciseTests */,
-				63016C091F1FA55F00C7BDF7 /* MeliMPExerciseUITests */,
 				63016BE31F1FA55F00C7BDF7 /* Products */,
 				6794B4ABBDA9CB6D2AD21D8A /* Pods */,
 				22EE45D827E0084F5FD1AE08 /* Frameworks */,
@@ -204,24 +196,6 @@
 				63016BE61F1FA55F00C7BDF7 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		63016BFE1F1FA55F00C7BDF7 /* MeliMPExerciseTests */ = {
-			isa = PBXGroup;
-			children = (
-				63016BFF1F1FA55F00C7BDF7 /* MeliMPExerciseTests.m */,
-				63016C011F1FA55F00C7BDF7 /* Info.plist */,
-			);
-			path = MeliMPExerciseTests;
-			sourceTree = "<group>";
-		};
-		63016C091F1FA55F00C7BDF7 /* MeliMPExerciseUITests */ = {
-			isa = PBXGroup;
-			children = (
-				63016C0A1F1FA55F00C7BDF7 /* MeliMPExerciseUITests.m */,
-				63016C0C1F1FA55F00C7BDF7 /* Info.plist */,
-			);
-			path = MeliMPExerciseUITests;
 			sourceTree = "<group>";
 		};
 		63016C1B1F1FCC8F00C7BDF7 /* ViewController */ = {
@@ -557,7 +531,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63016C001F1FA55F00C7BDF7 /* MeliMPExerciseTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,7 +538,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63016C0B1F1FA55F00C7BDF7 /* MeliMPExerciseUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
