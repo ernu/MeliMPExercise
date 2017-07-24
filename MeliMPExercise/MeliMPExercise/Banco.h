@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) NSString *bancoId;
 @property (strong, nonatomic) NSString *name;
+@property (strong, nonatomic) NSString *thumbnail;
 
 - (instancetype)initWithDictionary:(NSDictionary*)dictionary;
 

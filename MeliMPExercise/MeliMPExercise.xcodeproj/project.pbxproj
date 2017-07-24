@@ -384,7 +384,6 @@
 				TargetAttributes = {
 					63016BE11F1FA55F00C7BDF7 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = VGWH7F224V;
 						ProvisioningStyle = Automatic;
 					};
 					63016BFA1F1FA55F00C7BDF7 = {
@@ -462,7 +461,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		E42C52249330E193A62F86E7 /* [CP] Embed Pods Frameworks */ = {
@@ -681,7 +680,7 @@
 			baseConfigurationReference = E34B8179BAA9FF64EE6689DE /* Pods-MeliMPExercise.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = VGWH7F224V;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MeliMPExercise/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ernu.MeliMPExercise;
@@ -694,7 +693,7 @@
 			baseConfigurationReference = 2589AA287D6FD872DA33BFAE /* Pods-MeliMPExercise.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = VGWH7F224V;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MeliMPExercise/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ernu.MeliMPExercise;

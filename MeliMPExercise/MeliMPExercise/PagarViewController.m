@@ -112,12 +112,14 @@ typedef enum {
         allFilled = false;
         [_bancoDataView setTapGestureActive:false];
         _bancoDataView.datosLbl.text = NSLocalizedString(@"TXT_SELECCIONE_BANCO", nil);
+        [_bancoDataView.img setImage:nil];
     }
     if (!_selectedMonto || [_selectedMonto intValue] == 0 || !_selectedBanco || !_selectedMedioPago) {
         allFilled = false;
         [_cuotasDataView setTapGestureActive:false];
         if (!_selectedBanco) {
             _bancoDataView.datosLbl.text = NSLocalizedString(@"TXT_SELECCIONE_BANCO", nil);
+            [_bancoDataView.img setImage:nil];
         }
         _cuotasDataView.datosLbl.text = NSLocalizedString(@"TXT_SELECCIONE_CUOTAS", nil);
     }
@@ -207,6 +209,7 @@ typedef enum {
 - (IBAction)unwindFromBancoToPagar:(UIStoryboardSegue *)unwindSegue
 {
     _bancoDataView.datosLbl.text = _selectedBanco.name;
+    [_bancoDataView setImgWithUrl:_selectedBanco.thumbnail];
     _selectedCuota = nil;
     [self checkFilledData];
     

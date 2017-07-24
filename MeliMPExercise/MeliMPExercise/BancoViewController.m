@@ -124,7 +124,7 @@
         [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
     
-    [cell setData:banco.name img:nil];
+    [cell setData:banco.name img:banco.thumbnail];
     
     return cell;
     

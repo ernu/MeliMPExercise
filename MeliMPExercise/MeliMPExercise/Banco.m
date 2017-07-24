@@ -15,6 +15,7 @@
         
         self.bancoId = dictionary[@"id"];
         self.name = dictionary[@"name"];
+        self.thumbnail = dictionary[@"secure_thumbnail"];
     }
     return self;
 }
