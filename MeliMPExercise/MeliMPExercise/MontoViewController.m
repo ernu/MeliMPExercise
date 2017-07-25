@@ -47,6 +47,7 @@
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     
     NSString *number = [textField.text stringByReplacingCharactersInRange:range withString:string];
+    number = [number stringByReplacingOccurrencesOfString:@"," withString:@"."];
     
     NSArray  *arrayOfString = [number componentsSeparatedByString:@"."];
     if (([arrayOfString count] > 2) || (([arrayOfString count] == 2) && ([[arrayOfString objectAtIndex:1] length] > 2))) return NO;
@@ -61,7 +62,8 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:unwindFromMontoToPagar]) {
         PagarViewController *vc = [segue destinationViewController];
-        [vc setSelectedMonto:_montoTf.text];
+        NSString *montoStr = [_montoTf.text stringByReplacingOccurrencesOfString:@"," withString:@"."];
+        [vc setSelectedMonto:montoStr];
     }
 }
 
